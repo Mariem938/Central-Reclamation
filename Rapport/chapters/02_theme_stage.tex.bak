@@ -1,0 +1,32 @@
+\chapter{Présentation du thème du stage}
+
+\section*{Introduction}
+Le stage effectué au sein de la société SCPC Comptoir Hammami s'inscrit dans une optique de modernisation des processus internes. Face à l'accroissement du volume d'activités et à l'exigence croissante en matière de qualité de service, il est devenu impératif de repenser la gestion des réclamations clients. Ce chapitre définit le cadre général du projet, en précisant la problématique rencontrée, les objectifs visés ainsi que la méthodologie adoptée.
+
+\section{Problématique}
+Actuellement, la gestion des réclamations au sein de la SCPC repose sur des processus qui peuvent manquer de fluidité ou de traçabilité centralisée. Les informations circulent entre différents services (Commercial, Qualité, Fournisseur) parfois via des canaux dispersés (téléphone, emails non structurés), ce qui peut entraîner :
+\begin{itemize}
+    \item Une perte d'information ou des délais de réponse allongés.
+    \item Une difficulté à obtenir une vision globale des statistiques de non-conformité.
+    \item Un manque de visibilité pour le client sur l'avancement de son dossier.
+\end{itemize}
+
+\section{Solution proposée : "Central de Réclamation"}
+Pour pallier ces difficultés, le projet consiste à concevoir et développer une application web centralisée nommée "Central de Réclamation". Cette solution informatique vise à dématérialiser l'intégralité du flux de traitement :
+\begin{itemize}
+    \item \textbf{Pour le Client :} Un portail dédié pour saisir ses réclamations et suivre leur statut en temps réel.
+    \item \textbf{Pour les Agents (RMQ/AQF) :} Un tableau de bord unifié pour valider, traiter et clôturer les tickets avec efficacité.
+    \item \textbf{Pour la Direction :} Des indicateurs de performance permettant d'identifier les axes d'amélioration.
+\end{itemize}
+
+\section{Objectifs du projet}
+Les principaux objectifs assignés à ce stage sont :
+\begin{enumerate}
+    \item Analyser les besoins fonctionnels des différents acteurs.
+    \item Concevoir une architecture logicielle robuste et évolutive.
+    \item Développer l'application en utilisant des technologies web standards.
+    \item Garantir la fiabilité des données et la sécurité des accès.
+\end{enumerate}
+
+\section*{Conclusion}
+Ce chapitre a permis de cerner le contexte du projet et de définir les enjeux liés à la mise en place du système "Central de Réclamation". La solution proposée devra répondre aux attentes de l'organisme en matière d'efficacité et de transparence. Le chapitre suivant présentera l'environnement matériel et logiciel nécessaire à la réalisation de cette application.

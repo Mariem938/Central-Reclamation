@@ -1,0 +1,5 @@
+[2026-01-14 12:40:52] Erreur envoi changement statut: SMTP Error: Could not connect to SMTP host. Failed to connect to server
+[2026-01-26 11:43:33] V15 ERROR: SMTP Error: The following recipients failed: test_multi_tickets@example.com: <test_multi_tickets@example.com> <test_multi_tickets@example.com>: Recipient address rejected: Domain example.com does not accept mail (nullMX)
+
+[2026-01-26 11:43:36] V15 ERROR: SMTP Error: The following recipients failed: test_multi_tickets@example.com: <test_multi_tickets@example.com> <test_multi_tickets@example.com>: Recipient address rejected: Domain example.com does not accept mail (nullMX)
+

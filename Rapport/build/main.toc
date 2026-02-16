@@ -1,0 +1,44 @@
+\babel@toc {french}{}\relax 
+\contentsline {chapter}{Liste des figures}{3}{chapter*.2}%
+\contentsline {chapter}{Liste des tableaux}{4}{chapter*.3}%
+\contentsline {chapter}{Remerciements}{5}{chapter*.4}%
+\contentsline {chapter}{Introduction}{6}{chapter*.5}%
+\contentsline {chapter}{\numberline {1}Etude de l'organisme}{7}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Présentation de l'organisme}{7}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Secteur d'activité et Concurrence}{7}{subsection.1.1.1}%
+\contentsline {section}{\numberline {1.2}Organigramme de l'organisme}{7}{section.1.2}%
+\contentsline {section}{\numberline {1.3}Description de la structure concernée par le stage}{7}{section.1.3}%
+\contentsline {chapter}{\numberline {2}Présentation du thème du stage}{8}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Champ de l'étude et objet du stage}{8}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Planning prévisionnel du stage}{8}{section.2.2}%
+\contentsline {chapter}{\numberline {3}Infrastructure informatique}{9}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Matériel informatique}{9}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Logiciels utilisés}{9}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Outils de développement}{9}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Technologies et Langages}{9}{subsection.3.2.2}%
+\contentsline {chapter}{\numberline {4}Etude préalable}{10}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Description de l'existant}{10}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Processus actuel de traitement des réclamations}{10}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.2}Critiques de l'existant}{10}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Problèmes Organisationnels}{10}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Problèmes Techniques}{10}{subsection.4.2.2}%
+\contentsline {section}{\numberline {4.3}Solutions proposées}{11}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Approche 1 : Achat d'un logiciel CRM}{11}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Approche 2 : Développement Spécifique (Retenue)}{11}{subsection.4.3.2}%
+\contentsline {section}{\numberline {4.4}Développement de la solution finale}{11}{section.4.4}%
+\contentsline {chapter}{\numberline {5}Etude conceptuelle}{12}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Méthodologie de conception}{12}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Diagramme de Cas d'Utilisation}{12}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Diagramme de Séquence : Création d'un Ticket}{13}{section.5.3}%
+\contentsline {section}{\numberline {5.4}Diagramme de Classes}{13}{section.5.4}%
+\contentsline {chapter}{\numberline {6}Réalisation}{14}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Environnement de réalisation}{14}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Outils logiciels}{14}{subsection.6.1.1}%
+\contentsline {section}{\numberline {6.2}Architecture de l'application}{14}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Interfaces Graphiques}{14}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Espace Authentification}{14}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Tableau de Bord "Responsable Qualité"}{15}{subsection.6.3.2}%
+\contentsline {section}{\numberline {6.4}Scénarios de Test}{16}{section.6.4}%
+\contentsline {chapter}{Conclusion}{17}{chapter*.6}%
+\contentsline {chapter}{Bibliographie et Nétographie}{19}{chapter*.7}%
+\contentsline {chapter}{Annexe}{20}{chapter*.8}%

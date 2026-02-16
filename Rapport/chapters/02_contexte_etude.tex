@@ -1,0 +1,53 @@
+\chapter{Contexte général et étude préalable}
+
+\section*{Introduction}
+La réussite d'un projet informatique dépend d'une compréhension profonde de son environnement et des besoins réels de ses utilisateurs. Ce chapitre pose les fondations de notre travail en présentant d'abord le cadre du projet, la problématique rencontrée et les objectifs visés. Nous détaillerons ensuite l'étude de l'existant afin de justifier les choix de conception qui ont guidé le développement de la solution "Central de Réclamation".
+
+\section{Présentation du thème du stage}
+Le stage effectué au sein de la société SCPC Comptoir Hammami s'inscrit dans une optique de modernisation des processus internes. Face à l'accroissement du volume d'activités et à l'exigence croissante en matière de qualité de service, il est devenu impératif de repenser la gestion des réclamations clients.
+
+\subsection{Problématique}
+Actuellement, la gestion des réclamations au sein de la SCPC repose sur des processus qui peuvent manquer de fluidité ou de traçabilité centralisée. Les informations circulent entre différents services (Commercial, Qualité, Fournisseur) parfois via des canaux dispersés (téléphone, emails non structurés), ce qui peut entraîner :
+\begin{itemize}
+    \item Une perte d'information ou des délais de réponse allongés.
+    \item Une difficulté à obtenir une vision globale des statistiques de non-conformité.
+    \item Un manque de visibilité pour le client sur l'avancement de son dossier.
+\end{itemize}
+
+\subsection{Objectifs du projet}
+Les principaux objectifs assignés à ce stage sont :
+\begin{enumerate}
+    \item Analyser les besoins fonctionnels des différents acteurs.
+    \item Concevoir une architecture logicielle robuste et évolutive.
+    \item Développer l'application en utilisant des technologies web standards.
+    \item Garantir la fiabilité des données et la sécurité des accès.
+\end{enumerate}
+
+\section{Étude de l'existant}
+L'étude préalable permet de comprendre le fonctionnement actuel de l'organisme et de déceler les failles nécessitant une intervention informatique.
+
+\subsection{Description du processus actuel}
+Avant le démarrage du projet, le flux de traitement des réclamations se caractérisait par l'absence d'outils dédiés :
+\begin{itemize}
+    \item \textbf{Saisie Manuelle :} Les informations sont notées sur papier ou envoyées par email non structuré.
+    \item \textbf{Centralisation sur Excel :} Le Responsable Qualité (RMQ) doit ressaisir manuellement les données dans un fichier Excel local ("Registre des Non-Conformités").
+    \item \textbf{Suivi Opaque :} Pour connaître l'état d'un dossier, le client ou le commercial doit appeler manuellement le service qualité.
+\end{itemize}
+
+\subsection{Critiques de l'existant}
+Ce fonctionnement présente des limites majeures :
+\begin{itemize}
+    \item \textbf{Limites Organisationnelles :} Absence de traçabilité, perte de temps liée à la ressaisie, manque de réactivité.
+    \item \textbf{Limites Techniques :} Risque de perte de données (Excel unique/local), absence de statistiques automatisées, impossibilité de travail collaboratif fluide.
+\end{itemize}
+
+\section{Solution proposée : "Central de Réclamation"}
+Face à ces constats, le développement d'une application web sur mesure a été retenu. Cette solution informatique vise à dématérialiser l'intégralité du flux de traitement :
+\begin{itemize}
+    \item \textbf{Développement spécifique :} Coller parfaitement au workflow de validation qualité de la SCPC.
+    \item \textbf{Centralisation :} Une base de données unique accessible en temps réel par tous les acteurs (Clients, Commerciaux, RMQ, AQF).
+    \item \textbf{Automatisation :} Notification automatique par email et calcul instantané des indicateurs de performance.
+\end{itemize}
+
+\section*{Conclusion}
+Ce chapitre a permis de fusionner le cadre du stage et l'analyse de l'existant, mettant en évidence la nécessité de moderniser le système de gestion des réclamations. Le passage d'une gestion manuelle sur Excel à une plateforme interactive constitue le socle du projet. Le chapitre suivant présentera l'infrastructure technique nécessaire à la réalisation de cette solution.

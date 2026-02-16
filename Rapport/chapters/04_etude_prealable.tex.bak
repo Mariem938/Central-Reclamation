@@ -1,0 +1,53 @@
+\chapter{Etude préalable}
+
+\section*{Introduction}
+L'étude préalable est une étape cruciale qui permet de comprendre le fonctionnement actuel de l'organisme et de déceler les failles nécessitant une intervention informatique. Ce chapitre dresse un état des lieux du processus de gestion des réclamations au sein de la SCPC Comptoir Hammami, met en évidence les limites du système manuel existant et justifie le choix de la solution technique adoptée.
+
+\section{Description de l'existant}
+Avant le démarrage du projet "Central de Réclamation", la gestion des retours et des plaintes clients ne bénéficiait d'aucune digitalisation. Le processus reposait entièrement sur des méthodes manuelles, utilisant principalement des échanges verbaux, des formulaires papier et des fichiers bureautiques non partagés en temps réel.
+
+\subsection{Processus actuel de traitement des réclamations}
+Le flux de traitement se caractérisait par l'absence d'outils dédiés, s'articulant comme suit :
+\begin{enumerate}
+    \item \textbf{Saisie Manuelle :} Lorsqu'un client signale un problème, le commercial note les informations sur un carnet ou un formulaire papier volant, ou envoie un simple email au service qualité sans format standardisé.
+    \item \textbf{Centralisation sur Excel :} Le Responsable Qualité (RMQ) doit ressaisir manuellement toutes ces informations disparates dans un fichier Excel local ("Registre des Non-Conformités").
+    \item \textbf{Suivi non automatisé :} Pour connaître l'état d'un dossier, le commercial ou le client doit appeler le service qualité, qui doit alors rechercher l'information dans ses fichiers Excel.
+    \item \textbf{Archivage physique :} Les preuves (photos, bons de livraison) sont souvent stockées dans des dossiers physiques ou dispersées sur différents postes de travail.
+\end{enumerate}
+
+\section{Critiques de l'existant}
+L'analyse de ce fonctionnement "tout manuel" et basé sur Excel a mis en lumière plusieurs critiques majeures entravant l'efficacité de l'entreprise :
+
+\subsection{Limites Organisationnelles}
+\begin{itemize}
+    \item \textbf{Absence de traçabilité :} Il est difficile de savoir qui a traité quelle réclamation et à quelle date.
+    \item \textbf{Perte de temps :} La ressaisie des données du papier vers Excel est chronophage et source d'erreurs.
+    \item \textbf{Manque de réactivité :} L'information circule lentement entre le commercial et le service qualité.
+\end{itemize}
+
+\subsection{Limites Techniques}
+\begin{itemize}
+    \item \textbf{Pas de centralisation fiable :} Le fichier Excel, unique, ne permet pas un travail collaboratif simultané sécurisé.
+    \item \textbf{Risque de perte de données :} Un crash disque ou une mauvaise manipulation du fichier Excel peut entraîner la perte de tout l'historique.
+    \item \textbf{Absence de statistiques automatisées :} Produire des rapports sur la qualité nécessite un traitement manuel laborieux inadapté à un reporting efficace.
+\end{itemize}
+
+\section{Solutions proposées}
+Face à ces constats, il est apparu nécessaire de remplacer la gestion manuelle sur Excel par une solution digitale robuste. 
+
+\subsection{Approche 1 : Solution Progicielle (CRM standard)}
+L'acquisition d'un CRM du marché a été envisagée. Bien que puissante, cette solution présentait des coûts de licence élevés et une complexité de mise en œuvre disproportionnée par rapport au besoin spécifique de gestion des réclamations qualité.
+
+\subsection{Approche 2 : Développement Spécifique (Solution Retenue)}
+Le choix s'est porté sur le développement d'une application web sur mesure. Cette approche permet de :
+\begin{itemize}
+    \item Coller parfaitement au workflow de validation qualité de la SCPC.
+    \item S'affranchir des coûts de licence.
+    \item Offrir une interface simplifiée accessible à tous (Clients et Internes) via un simple navigateur.
+\end{itemize}
+
+\section{Développement de la solution finale}
+Le projet "Central de Réclamation" vise donc à informatiser l'intégralité du cycle de vie d'une réclamation, de sa saisie par le client jusqu'à sa clôture, en remplaçant les fichiers Excel par une base de données centralisée et sécurisée.
+
+\section*{Conclusion}
+L'étude de l'existant a confirmé que la gestion manuelle sur Excel n'était plus viable pour une structure de l'envergure de la SCPC. Le passage à une solution web centralisée s'impose comme la réponse adéquate pour gagner en fiabilité, en temps et en qualité de service. Le chapitre suivant détaillera la conception technique de cette nouvelle solution.

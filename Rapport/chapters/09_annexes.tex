@@ -1,0 +1,12 @@
+\chapter*{Annexe}
+\addcontentsline{toc}{chapter}{Annexe}
+
+\section*{Annexe 1 : Modèle Relationnel de Données}
+Le stockage des informations repose sur un modèle relationnel standard. Les principales tables sont les suivantes :
+
+\begin{itemize}
+    \item \textbf{Tickets} : Cette table centrale stocke toutes les réclamations, avec leur sujet, leur description, et les clés étrangères vers le client et le statut.
+    \item \textbf{Utilisateurs} : Contient les informations de connexion (email, mot de passe haché) et les profils (Client, RMQ, Admin).
+    \item \textbf{Statuts} : Définit le cycle de vie d'un ticket (Nouveau -> En cours -> Clôturé).
+    \item \textbf{Historique} : Permet une traçabilité complète de chaque action effectuée sur un ticket (Qui a fait quoi et quand).
+\end{itemize}

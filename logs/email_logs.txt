@@ -1,0 +1,166 @@
+[2026-01-07 10:37:17] Ticket ID: 4 | To: omniabensalah123@gmail.com | Subject: Bienvenue - Vos identifiants de connexion | Status: sent
+[2026-01-07 10:43:42] Ticket ID: 5 | To: omniabensalah123@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0005 | Status: sent
+[2026-01-07 10:51:03] Ticket ID: 6 | To: ahmed.gargouri@groupe-hammami.com | Subject: Bienvenue - Vos identifiants de connexion | Status: sent
+[2026-01-07 10:58:31] Ticket ID: 7 | To: webmaster@groupe-hammami.com | Subject: Bienvenue - Vos identifiants de connexion | Status: sent
+[2026-01-07 11:02:54] Ticket ID: 8 | To: frikhamariem95@gmail.com | Subject: Bienvenue - Vos identifiants de connexion | Status: sent
+[2026-01-07 11:26:58] Ticket ID: 9 | To: tahacheif07@gmail.com | Subject: Bienvenue - Vos identifiants de connexion | Status: sent
+[2026-01-07 11:31:02] Ticket ID: 10 | To: farahfrikha471@gmail.com | Subject: Bienvenue - Vos identifiants de connexion | Status: sent
+[2026-01-07 13:06:18] Ticket ID: 10 | To: farahfrikha471@gmail.com | Subject: Mise à jour - Réclamation N° TKT-2026-0010 | Status: sent
+[2026-01-07 13:06:28] Ticket ID: 10 | To: farahfrikha471@gmail.com | Subject: Mise à jour - Réclamation N° TKT-2026-0010 | Status: sent
+[2026-01-07 13:06:32] Ticket ID: 10 | To: farahfrikha471@gmail.com | Subject: Mise à jour - Réclamation N° TKT-2026-0010 | Status: sent
+[2026-01-07 13:09:11] Ticket ID: 10 | To: farahfrikha471@gmail.com | Subject: Mise à jour - Réclamation N° TKT-2026-0010 | Status: sent
+[2026-01-07 13:22:11] Ticket ID: 10 | To: farahfrikha471@gmail.com | Subject: Mise à jour - Réclamation N° TKT-2026-0010 | Status: sent
+[2026-01-07 13:27:02] Ticket ID: 10 | To: farahfrikha471@gmail.com | Subject: Mise à jour - Réclamation N° TKT-2026-0010 | Status: sent
+[2026-01-07 13:28:34] Ticket ID: 10 | To: farahfrikha471@gmail.com | Subject: Mise à jour - Réclamation N° TKT-2026-0010 | Status: sent
+[2026-01-07 21:17:26] Ticket ID: 11 | To: tahacherif07@gmail.com | Subject: Bienvenue - Vos identifiants de connexion | Status: sent
+[2026-01-07 21:20:46] Ticket ID: 12 | To: frikhamariem95@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0012 | Status: sent
+[2026-01-08 10:31:26] Ticket ID: 13 | To: omniabensalah123@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0013 | Status: sent
+[2026-01-08 10:51:09] Ticket ID: 14 | To: azizghorbel05@gmail.com | Subject: Bienvenue - Vos identifiants de connexion | Status: sent
+[2026-01-08 12:13:07] Ticket ID: 4 | To: cliniqueOML@gmail.com | Subject: Mise à jour - Réclamation N° TK-202601-0003 | Status: sent
+[2026-01-08 12:14:31] Ticket ID: 2 | To: lamisissawi@gmail.com | Subject: Mise à jour - Réclamation N° TK-202601-0002 | Status: sent
+[2026-01-08 12:15:43] Ticket ID: 4 | To: frikhamariem95@gmail.com | Subject: Mise à jour - Réclamation N° TK-202601-0001 | Status: sent
+[2026-01-08 12:29:07] Ticket ID: 5 | To: omniabensalah123@gmail.com | Subject: Bienvenue - Vos identifiants de connexion | Status: sent
+[2026-01-08 12:37:25] Ticket ID: 2 | To: omniabensalah123@gmail.com | Subject: Mise à jour - Réclamation N° TKT-2026-0004 | Status: sent
+[2026-01-08 15:55:43] Ticket ID: 2 | To: omniabensalah123@gmail.com | Subject: Mise à jour - Réclamation N° TKT-2026-0004 | Status: sent
+[2026-01-08 16:05:37] Ticket ID: 5 | To: cliniqueOML@gmail.com | Subject: Mise à jour - Réclamation N° TK-202601-0003 | Status: sent
+[2026-01-09 08:57:07] Ticket ID: 4 | To: omniabensalah123@gmail.com | Subject: Mise à jour - Réclamation N° TKT-2026-0004 | Status: sent
+[2026-01-09 11:59:46] Ticket ID: 6 | To: omniabensalah123@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0005 | Status: sent
+[2026-01-09 12:03:40] Ticket ID: 2 | To: omniabensalah123@gmail.com | Subject: Mise à jour - Réclamation N° TKT-2026-0005 | Status: sent
+[2026-01-12 20:47:08] Ticket ID: 13 | To: frikhamariem95@gmail.com | Subject: Bienvenue - Vos identifiants de connexion | Status: sent
+[2026-01-13 08:43:03] Ticket ID: 14 | To: omniabensalah123@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0007 | Status: sent
+[2026-01-13 08:58:50] Ticket ID: 2 | To: omniabensalah123@gmail.com | Subject: Mise à jour - Réclamation N° TKT-2026-0007 | Status: sent
+[2026-01-13 12:07:55] Ticket ID: 15 | To: ahmed.gargouri@groupe-hammami.com | Subject: Bienvenue - Vos identifiants de connexion | Status: sent
+[2026-01-13 12:11:00] Ticket ID: 2 | To: ahmed.gargouri@groupe-hammami.com | Subject: Mise à jour - Réclamation N° TKT-2026-0008 | Status: sent
+[2026-01-13 12:17:21] Ticket ID: 16 | To: omniabensalah123@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0009 | Status: sent
+[2026-01-14 10:34:50] Ticket ID: 4 | To: omniabensalah123@gmail.com | Subject: Mise à jour - Réclamation N° TKT-2026-0008 | Status: sent
+[2026-01-14 11:14:09] Ticket ID: 16 | To: omniabensalah123@gmail.com | Subject: Bienvenue - Vos identifiants de connexion | Status: sent
+[2026-01-14 12:31:12] Ticket ID: 17 | To: omniabensalah123@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0010 | Status: sent
+[2026-01-14 12:50:46] Ticket ID: 4 | To: omniabensalah123@gmail.com | Subject: Mise à jour - Réclamation N° TKT-2026-0010 | Status: sent
+[2026-01-14 23:05:54] Ticket ID: 18 | To: omniabensalah123@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0011 | Status: sent
+[2026-01-16 11:17:59] Ticket ID: 19 | To: frikhamariem95@gmail.com | Subject: Bienvenue - Vos identifiants de connexion | Status: sent
+[2026-01-16 11:24:06] Ticket ID: 20 | To: frikhamariem95@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0013 | Status: sent
+[2026-01-16 12:01:18] Ticket ID: 4 | To: frikhamariem95@gmail.com | Subject: Mise à jour - Réclamation N° TKT-2026-0013 | Status: sent
+[2026-01-18 16:57:52] Ticket ID: 0 | To: farahfrikha471@gmail.com | Subject: Mise à jour Réclamation #TKT-2026-0014 | Status: sent
+[2026-01-18 16:58:13] Ticket ID: 0 | To: farahfrikha471@gmail.com | Subject: Mise à jour Réclamation #TKT-2026-0014 | Status: sent
+[2026-01-18 17:17:16] Ticket ID: 25 | To: frikhamariem95@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0015 | Status: sent
+[2026-01-20 12:59:28] Ticket ID: 28 | To: frikhamariem95@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0018 | Status: sent
+[2026-01-20 17:29:32] Ticket ID: 31 | To: frikhamariem95@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0021 | Status: sent
+[2026-01-20 22:00:18] Ticket ID: 32 | To: tahacherif07@gmail.com | Subject: Bienvenue - Vos identifiants de connexion | Status: sent
+[2026-01-20 22:00:33] Ticket ID: 33 | To: tahacherif07@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0023 | Status: sent
+[2026-01-22 00:23:57] Ticket ID: 34 | To: frikhamariem95@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0024 | Status: sent
+[2026-01-22 08:55:25] Ticket ID: 35 | To: frikhamariem95@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0025 | Status: sent
+[2026-01-22 09:16:44] Ticket ID: 36 | To: frikhamariem95@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0026 | Status: sent
+[2026-01-22 09:37:21] Ticket ID: 0 | To: frikhamariem95@gmail.com | Subject: Réclamation #TKT-2026-0026 - REFUSÉE | Status: sent
+[2026-01-22 09:42:55] Ticket ID: 0 | To: frikhamariem95@gmail.com | Subject: Réclamation #TKT-2026-0026 - REFUSÉE | Status: sent
+[2026-01-22 09:45:58] Ticket ID: 0 | To: frikhamariem95@gmail.com | Subject: Réclamation #TKT-2026-0027 - REFUSÉE | Status: sent
+[2026-01-22 10:33:38] Ticket ID: 0 | To: frikhamariem95@gmail.com | Subject: Réclamation #TKT-2026-0028 - REFUSÉE | Status: sent
+[2026-01-22 10:35:29] Ticket ID: 0 | To: omniabensalah123@gmail.com | Subject: Réclamation #TKT-2026-0029 - REFUSÉE | Status: sent
+[2026-01-22 10:39:40] Ticket ID: 0 | To: frikhamariem95@gmail.com | Subject: Réclamation #TKT-2026-0030 - REFUSÉE | Status: sent
+[2026-01-22 10:43:22] Ticket ID: 41 | To: omniabensalah123@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0031 | Status: sent
+[2026-01-22 10:44:15] Ticket ID: 0 | To: omniabensalah123@gmail.com | Subject: Réclamation #TKT-2026-0031 - REFUSÉE | Status: sent
+[2026-01-22 10:52:45] Ticket ID: 0 | To: frikhamariem95@gmail.com | Subject: Réclamation #TKT-2026-0032 - REFUSÉE | Status: sent
+[2026-01-22 11:06:20] Ticket ID: 43 | To: frikhamariem95@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0033 | Status: sent
+[2026-01-22 11:19:17] Ticket ID: 44 | To: omniabensalah@gmail.com | Subject: Bienvenue - Vos identifiants de connexion | Status: sent
+[2026-01-22 13:00:07] Ticket ID: 45 | To: frikhamariem95@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0035 | Status: sent
+[2026-01-22 20:11:23] Ticket ID: 0 | To: frikhamariem95@gmail.com | Subject: Réclamation #TKT-2026-0036 - REFUSÉE | Status: sent
+[2026-01-22 20:14:35] Ticket ID: 0 | To: frikhamariem95@gmail.com | Subject: Réclamation #TKT-2026-0037 - REFUSÉE | Status: sent
+[2026-01-22 20:23:34] Ticket ID: 48 | To: frikhamariem95@gmail.com | Subject: Refus de Réclamation - Ticket N° TKT-2026-0038 | Status: sent
+[2026-01-22 20:33:35] Ticket ID: 49 | To: frikhamariem95@gmail.com | Subject: Refus de Réclamation - Ticket N° TKT-2026-0039 | Status: sent
+[2026-01-23 09:48:29] Ticket ID: 1 | To: frikhamariem95@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0001 | Status: sent
+[2026-01-23 10:32:03] Ticket ID: 6 | To: omniabensalah123@gmail.com | Subject: Confirmation - Réclamation N° TKT-2026-0002 | Status: sent
+[2026-01-23 20:22:03] Ticket ID: 0 | To: omniabensalah123@gmail.com | Subject: Mise à jour Réclamation #TKT-2026-0002 | Status: sent
+[2026-01-23 20:22:41] Ticket ID: 0 | To: frikhamariem95@gmail.com | Subject: Mise à jour Réclamation #TKT-2026-0001 | Status: sent
+[2026-01-23 21:04:08] Ticket ID: 0 | To: frikhamariem95@gmail.com | Subject: Mise à jour Réclamation #TKT-2026-0001 | Status: sent
+[2026-01-23 21:34:52] Ticket ID: 0 | To: frikhamariem95@gmail.com | Subject: Mise à jour Réclamation #TKT-2026-0001 | Status: sent
+[2026-01-23 22:18:02] Ticket: 1 | To: frikhamariem95@gmail.com | Sub: Mise à jour - Réclamation N° TKT-2026-0001 | Stat: sent
+[2026-01-23 22:18:19] Ticket: 1 | To: frikhamariem95@gmail.com | Sub: Mise à jour - Réclamation N° TKT-2026-0001 | Stat: sent
+[2026-01-23 22:19:08] Ticket: 1 | To: frikhamariem95@gmail.com | Sub: Mise à jour - Réclamation N° TKT-2026-0001 | Stat: sent
+[2026-01-23 22:21:09] Ticket: 0 | To: software@groupe-hammami.com.tn | Sub: Test Connectivity | Stat: sent
+[2026-01-23 22:23:49] Ticket: 0 | To: software@groupe-hammami.com.tn | Sub: Test Connectivity | Stat: sent
+[2026-01-23 22:33:30] Ticket: 0 | To: software@groupe-hammami.com.tn | Sub: Test Connectivity | Stat: sent
+[2026-01-23 22:36:19] Ticket: 1 | To: frikhamariem95@gmail.com | Sub: Mise a jour - Reclamation N. TKT-2026-0001 | Stat: sent
+[2026-01-24 16:44:04] ID:0 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Test Livraison SCPC
+[2026-01-24 16:48:37] ID:0 | TO:frikhamariem95@gmail.com | STAT:sent | SUB:DEBUG TEST DELIVERY 587
+[2026-01-24 16:49:31] ID:0 | TO:frikhamariem95@gmail.com | STAT:sent | SUB:DEBUG TEST DELIVERY 587
+[2026-01-24 16:52:57] ID:0 | TO:frikhamariem95@gmail.com | STAT:sent | SUB:DEBUG FINAL SCPC
+[2026-01-24 16:56:40] ID:0 | TO:frikhamariem95@gmail.com | STAT:sent | SUB:TEST SIMPLE 465
+[2026-01-24 16:59:46] ID:0 | TO:frikhamariem95@gmail.com | STAT:sent | SUB:TEST LIVRAISON INFALLIBLE V7
+[2026-01-24 17:02:37] ID:0 | To:frikhamariem95@gmail.com | Stat:sent | Sub:TEST LIVRAISON SCPC V8
+[2026-01-24 17:04:53] ID:0 | TO:frikhamariem95@gmail.com | STAT:sent | SUB:Test Livraison Master V9
+[2026-01-24 17:08:11] V10 ID:0 | To:frikhamariem95@gmail.com | Stat:sent | Sub:PURE TEXT TEST 10
+[2026-01-24 17:13:01] ID:0 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Test Livraison Master V11
+[2026-01-24 17:21:28] V12 ID:0 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Test Livraison V12
+[2026-01-24 17:41:13] V13 ID:0 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Test Livraison Master V13
+[2026-01-24 17:48:51] V13 ID:1 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Statut mis a jour - TKT-2026-0001
+[2026-01-24 18:00:35] V14 PREMIUM ID:999 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Mise à Jour - TKT-2026-0026
+[2026-01-24 18:06:58] V14 PREMIUM ID:1234 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Mise à Jour - TKT-2026-0026
+[2026-01-24 18:09:00] V14 PREMIUM ID:1 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Mise à Jour - TKT-2026-0001
+[2026-01-24 18:10:01] V14 PREMIUM ID:1 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Mise à Jour - TKT-2026-0001
+[2026-01-24 18:18:40] V16 MASTER ID:1234 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Dossier TKT-2026-0888 à jour
+[2026-01-24 18:19:42] V16 MASTER ID:1 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Dossier TKT-2026-0001 à jour
+[2026-01-24 18:30:52] V15 REVERT ID:1 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Mise à Jour - TKT-2026-0001
+[2026-01-25 23:12:57] V15 REVERT ID:13 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Confirmation TKT-2026-0006
+[2026-01-25 23:12:58] V15 REVERT ID:13 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0006)
+[2026-01-25 23:12:59] V15 REVERT ID:13 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0006)
+[2026-01-25 23:23:00] V15 REVERT ID:13 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Mise à Jour - TKT-2026-0006
+[2026-01-26 10:23:32] V15 REVERT ID:14 | To:omniabensalah123@gmail.com | Stat:sent | Sub:Confirmation TKT-2026-0007
+[2026-01-26 10:23:34] V15 REVERT ID:14 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0007)
+[2026-01-26 10:23:36] V15 REVERT ID:14 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0007)
+[2026-01-26 10:26:07] V15 REVERT ID:14 | To:omniabensalah123@gmail.com | Stat:sent | Sub:Information Dossier
+[2026-01-26 10:27:43] V15 REVERT ID:14 | To:omniabensalah123@gmail.com | Stat:sent | Sub:Mise à Jour - TKT-2026-0007
+[2026-01-26 10:38:25] V15 REVERT ID:14 | To:omniabensalah123@gmail.com | Stat:sent | Sub:Mise à Jour - TKT-2026-0007
+[2026-01-26 10:42:55] V15 REVERT ID:15 | To:rmqreclamation@gmail.com | Stat:sent | Sub:Bienvenue chez SCPC - Vos identifiants de connexion (Ticket TKT-2026-0008)
+[2026-01-26 10:42:58] V15 REVERT ID:15 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0008)
+[2026-01-26 10:43:01] V15 REVERT ID:15 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0008)
+[2026-01-26 11:17:07] V15 REVERT ID:18 | To:omniaabensalah@gmail.com | Stat:sent | Sub:Bienvenue chez SCPC - Vos identifiants de connexion (Ticket TKT-2026-0009)
+[2026-01-26 11:17:09] V15 REVERT ID:18 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0009)
+[2026-01-26 11:17:10] V15 REVERT ID:18 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0009)
+[2026-01-26 11:23:16] V15 REVERT ID:18 | To:omniaabensalah@gmail.com | Stat:sent | Sub:Mise à Jour - TKT-2026-0009
+[2026-01-26 11:43:34] V15 REVERT ID:19 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0010)
+[2026-01-26 11:43:38] V15 REVERT ID:20 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0011)
+[2026-01-26 11:51:21] V15 REVERT ID:21 | To:omniaabensalah@gmail.com | Stat:sent | Sub:Confirmation TKT-2026-0012
+[2026-01-26 11:51:23] V15 REVERT ID:21 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0012)
+[2026-01-26 11:51:25] V15 REVERT ID:21 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0012)
+[2026-01-26 17:22:46] V15 REVERT ID:22 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Confirmation TKT-2026-0013
+[2026-01-26 17:22:48] V15 REVERT ID:22 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0013)
+[2026-01-26 17:22:50] V15 REVERT ID:22 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0013)
+[2026-01-26 17:38:46] V15 REVERT ID:23 | To:tahacherif07@gmail.com | Stat:sent | Sub:Confirmation TKT-2026-0014
+[2026-01-26 17:38:47] V15 REVERT ID:23 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0014)
+[2026-01-26 17:38:48] V15 REVERT ID:23 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0014)
+[2026-01-26 17:38:50] V15 REVERT ID:23 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0014)
+[2026-01-26 17:40:23] V15 REVERT ID:23 | To:tahacherif07@gmail.com | Stat:sent | Sub:Mise à Jour - TKT-2026-0014
+[2026-01-26 19:39:51] V15 REVERT ID:24 | To:testreclamation@gmail.com | Stat:sent | Sub:Bienvenue chez SCPC - Vos identifiants de connexion (Ticket TKT-2026-0001)
+[2026-01-26 19:39:53] V15 REVERT ID:24 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0001)
+[2026-01-26 19:39:54] V15 REVERT ID:24 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0001)
+[2026-01-26 20:05:52] V15 REVERT ID:25 | To:testocreo@gmail.com | Stat:sent | Sub:Confirmation TKT-2026-0002
+[2026-01-26 20:05:54] V15 REVERT ID:25 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0002)
+[2026-01-26 20:05:56] V15 REVERT ID:25 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0002)
+[2026-01-26 20:05:58] V15 REVERT ID:25 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0002)
+[2026-01-27 18:44:11] V15 REVERT ID:26 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Bienvenue chez SCPC - Vos identifiants de connexion (Ticket TKT-2026-0003)
+[2026-01-27 18:44:13] V15 REVERT ID:26 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0003)
+[2026-01-27 18:44:14] V15 REVERT ID:26 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0003)
+[2026-02-05 20:33:54] V15 REVERT ID:26 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Mise à Jour - TKT-2026-0003
+[2026-02-05 20:36:41] V15 REVERT ID:26 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Mise à Jour - TKT-2026-0003
+[2026-02-06 00:05:28] V15 REVERT ID:27 | To:omnia@gmail.com | Stat:sent | Sub:Bienvenue chez SCPC - Vos identifiants de connexion (Ticket TKT-2026-0004)
+[2026-02-06 00:05:30] V15 REVERT ID:27 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0004)
+[2026-02-06 00:05:32] V15 REVERT ID:27 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0004)
+[2026-02-06 13:17:49] V15 REVERT ID:28 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Confirmation TKT-2026-0005
+[2026-02-06 13:17:51] V15 REVERT ID:28 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0005)
+[2026-02-06 13:17:53] V15 REVERT ID:28 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0005)
+[2026-02-06 13:17:55] V15 REVERT ID:28 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0005)
+[2026-02-06 13:58:27] V15 REVERT ID:29 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Confirmation TKT-2026-0006
+[2026-02-06 13:58:28] V15 REVERT ID:29 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0006)
+[2026-02-06 13:58:30] V15 REVERT ID:29 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0006)
+[2026-02-06 13:58:31] V15 REVERT ID:29 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0006)
+[2026-02-06 14:47:12] V15 REVERT ID:30 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Confirmation TKT-2026-0007
+[2026-02-06 14:47:13] V15 REVERT ID:30 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0007)
+[2026-02-06 14:47:15] V15 REVERT ID:30 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0007)
+[2026-02-06 14:47:16] V15 REVERT ID:30 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0007)
+[2026-02-06 14:52:09] V15 REVERT ID:30 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Information Dossier
+[2026-02-06 15:25:19] V15 REVERT ID:31 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0008)
+[2026-02-06 15:25:21] V15 REVERT ID:31 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0008)
+[2026-02-06 15:25:22] V15 REVERT ID:31 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0008)
+[2026-02-06 15:26:52] V15 REVERT ID:31 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Mise à Jour - TKT-2026-0008
+[2026-02-06 15:44:17] V15 REVERT ID:28 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Mise à Jour - TKT-2026-0005
+[2026-02-06 21:38:52] V15 REVERT ID:32 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Confirmation TKT-2026-0008
+[2026-02-06 21:38:56] V15 REVERT ID:32 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0008)
