@@ -3,48 +3,109 @@
 \section*{Introduction}
 Après avoir cerné les besoins et les contraintes du projet dans l'étude préalable, il est essentiel de passer à la phase de conception. Ce chapitre se consacre à la modélisation détaillée du système "Central de Réclamation". En s'appuyant sur le langage UML (Unified Modeling Language), nous allons définir l'architecture statique et dynamique de l'application, garantissant ainsi une base solide pour le développement futur.
 
-\section{Diagramme de Cas d'Utilisation Global}
-Le diagramme suivant présente une vue d'ensemble exhaustive des interactions entre les différents acteurs et le système. Il met en évidence la séparation des responsabilités entre les clients, les commerciaux, le service qualité (RMQ/AQF) et l'administration. Les dépendances de type <<include>> et <<extend>> sont utilisées pour modéliser les fonctionnalités complexes telles que l'ajout de pièces jointes ou la notification automatique.
+\section{Diagrammes de Cas d'Utilisation}
+Afin de garantir une lisibilité optimale et une compréhension fine des processus, la modélisation fonctionnelle du système a été scindée en deux vues complémentaires. Cette approche permet de mettre en évidence les responsabilités spécifiques de chaque acteur sans surcharger la représentation graphique.
+
+\subsection{Cas d'Utilisation : Administration, AQF et Commercial}
+Ce premier diagramme se concentre sur les fonctions de gestion globale, de support terrain et de résolution technique. Il illustre comment l'administrateur supervise le système, comment le commercial assiste le client lors des visites et comment l'expert AQF traite les réclamations qui lui sont assignées.
 
 \begin{figure}[H]
     \centering
-    \begin{tikzpicture}[scale=0.75, transform shape]
-        % Système
-        \draw[thick, fill=blue!2, rounded corners] (2.5,-12) rectangle (12,1);
-        \node[font=\bfseries] at (7.25,1.4) {Système Central de Réclamation};
+    \begin{tikzpicture}[scale=0.55, transform shape]
+        % --- CADRE ---
+        \draw[thick, fill=blue!2, rounded corners] (3,-26) rectangle (16,1);
         
-        % Acteurs (Généralisés)
-        \node (client) at (0,0) [draw, circle, fill=green!10] {}; \node[below=0.1cm] at (client) {Client};
-        \node (comm) at (0,-3) [draw, circle, fill=orange!10] {}; \node[below=0.1cm] at (comm) {Commercial};
-        \node (rmq) at (0,-6) [draw, circle, fill=purple!10] {}; \node[below=0.1cm] at (rmq) {RMQ};
-        \node (aqf) at (0,-9) [draw, circle, fill=teal!10] {}; \node[below=0.1cm] at (aqf) {AQF};
-        \node (admin) at (14,-5) [draw, circle, fill=red!10] {}; \node[below=0.1cm] at (admin) {Admin};
+        % --- ACTEURS ---
+        \node (admin) at (0,0) [draw, circle, fill=red!10, minimum size=1cm] {}; \node[below=0.1cm, font=\bfseries] at (admin) {Admin};
+        \node (aqf) at (0,-10) [draw, circle, fill=teal!10, minimum size=1cm] {}; \node[below=0.1cm, font=\bfseries] at (aqf) {AQF};
+        \node (comm) at (0,-20) [draw, circle, fill=orange!10, minimum size=1cm] {}; \node[below=0.1cm, font=\bfseries] at (comm) {Commercial};
 
-        % Cas d'utilisation groupés par zone
-        \node[draw, ellipse, fill=white, minimum width=3cm] (auth) at (7,0) {S'authentifier};
-        \node[draw, ellipse, fill=white, minimum width=3.5cm] (creer) at (5.5,-2) {Créer réclamation};
-        \node[draw, ellipse, fill=white, minimum width=3cm] (suivi) at (5.5,-3.5) {Suivre état};
-        
-        \node[draw, ellipse, fill=white, minimum width=3.5cm] (vrmq) at (9,-5) {Valider/Refuser};
-        \node[draw, ellipse, fill=white, minimum width=3cm] (assign) at (9,-7) {Assigner AQF};
-        
-        \node[draw, ellipse, fill=white, minimum width=3.5cm] (traite) at (7,-9.5) {Traiter réclamation};
-        \node[draw, ellipse, fill=white, minimum width=3.5cm] (stats) at (7,-11) {Consulter Stats};
+        % --- AUTH ---
+        \draw[dashed, fill=white!50, rounded corners] (3.5,0.5) rectangle (15.5,-3);
+        \node[font=\itshape, anchor=north west] at (3.5,0.5) {Authentification \& Sécurité};
+        \node[draw, ellipse, fill=white] (UC_Auth_Login) at (6.5,-1.5) {S'authentifier};
+        \node[draw, ellipse, fill=white] (UC_Auth_Logout) at (10,-1.5) {Se déconnecter};
+        \node[draw, ellipse, fill=white] (UC_Auth_PWD) at (13.5,-1.5) {Récup. PWD};
 
-        \node[draw, ellipse, fill=white, minimum width=3.5cm] (users) at (11.5,-4) {Gérer Utilisateurs};
-        \node[draw, ellipse, fill=white, minimum width=3.5cm] (adminall) at (11.5,-6) {Vue globale};
+        % --- ADMIN ---
+        \draw[dashed, fill=white!50, rounded corners] (3.5,-3.5) rectangle (15.5,-8.5);
+        \node[font=\itshape, anchor=north west] at (3.5,-3.5) {Administration};
+        \node[draw, ellipse, fill=white] (UC_Admin_All) at (6.5,-5) {Toutes les récl.};
+        \node[draw, ellipse, fill=white] (UC_Admin_Year) at (6.5,-7) {Données / Année};
+        \node[draw, ellipse, fill=white] (UC_Admin_Users) at (11,-6) {Gérer Utilisateurs};
+        \node[draw, ellipse, fill=white, font=\tiny] (UC_Admin_Op) at (14,-6) {C/M/D/T};
 
-        % Relations
-        \draw (client) -- (auth); \draw (client) -- (creer); \draw (client) -- (suivi);
-        \draw (comm) -- (auth); \draw (comm) -- (creer);
-        \draw (rmq) -- (auth); \draw (rmq) -- (vrmq); \draw (rmq) -- (assign);
-        \draw (aqf) -- (auth); \draw (aqf) -- (traite);
-        \draw (admin) -- (auth); \draw (admin) -- (users); \draw (admin) -- (adminall);
-        
-        \draw (creer) -- (comm);
-        \draw (rmq) -- (stats); \draw (aqf) -- (stats);
+        % --- AQF ---
+        \draw[dashed, fill=white!50, rounded corners] (3.5,-9) rectangle (15.5,-16);
+        \node[font=\itshape, anchor=north west] at (3.5,-9) {Espace AQF};
+        \node[draw, ellipse, fill=white] (UC_AQF_View) at (6.5,-11.5) {Voir assignés};
+        \node[draw, ellipse, fill=white] (UC_AQF_Details) at (12,-11.5) {Voir détails};
+        \node[draw, ellipse, fill=white] (UC_AQF_Process) at (6.5,-14) {Traiter (AQF)};
+        \node[draw, ellipse, fill=white] (UC_AQF_Stats) at (12,-14) {Stats AQF};
+
+        % --- COMM ---
+        \draw[dashed, fill=white!50, rounded corners] (3.5,-16.5) rectangle (15.5,-25);
+        \node[font=\itshape, anchor=north west] at (3.5,-16.5) {Espace Commercial};
+        \node[draw, ellipse, fill=white] (UC_Comm_Dash) at (6.5,-19) {Dashboard};
+        \node[draw, ellipse, fill=white] (UC_Comm_Create) at (6.5,-22) {Créer p/ client};
+        \node[draw, ellipse, fill=white] (UC_Comm_Search) at (12,-20.5) {Chercher Client};
+
+        % --- LIAISONS ---
+        \draw (admin) -- (UC_Auth_Login); \draw (admin) -- (UC_Admin_Users); \draw (admin) -- (UC_Admin_All);
+        \draw (aqf) -- (UC_Auth_Login); \draw (aqf) -- (UC_AQF_View); \draw (aqf) -- (UC_AQF_Process);
+        \draw (comm) -- (UC_Auth_Login); \draw (comm) -- (UC_Comm_Dash); \draw (comm) -- (UC_Comm_Create);
+        \draw[->, dashed] (UC_Admin_Op) -- (UC_Admin_Users);
     \end{tikzpicture}
-    \caption{Diagramme de Cas d'Utilisation Global}
+    \caption{Cas d'Utilisation : Back-office et Support}
+\end{figure}
+
+\subsection{Cas d'Utilisation : Client et Responsable Qualité (RMQ)}
+Le second diagramme détaille le cœur du métier : l'interaction directe avec le client et le pilotage des flux par le RMQ. Il intègre également le système de notifications automatiques, élément clé pour le maintien d'une communication fluide tout au long du cycle de vie d'une réclamation.
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}[scale=0.55, transform shape]
+        % --- CADRE ---
+        \draw[thick, fill=blue!2, rounded corners] (3,-25) rectangle (15.5,1.5);
+        
+        % --- ACTEURS ---
+        \node (client) at (0,0) [draw, circle, fill=green!10, minimum size=1cm] {}; \node[below=0.1cm, font=\bfseries] at (client) {Client};
+        \node (rmq) at (0,-12) [draw, circle, fill=purple!10, minimum size=1cm] {}; \node[below=0.1cm, font=\bfseries] at (rmq) {RMQ};
+
+        % --- AUTH ---
+        \draw[dashed, fill=white!50, rounded corners] (3.5,0.5) rectangle (15,-2);
+        \node[draw, ellipse, fill=white] (UC_Auth) at (7.5,-1) {S'authentifier / PWD};
+
+        % --- CLIENT ---
+        \draw[dashed, fill=white!50, rounded corners] (3.5,-2.5) rectangle (15,-8);
+        \node[font=\itshape, anchor=north west] at (3.5,-2.5) {Espace Client};
+        \node[draw, ellipse, fill=white] (UC_Client_Create) at (6.5,-4.5) {Créer récl.};
+        \node[draw, ellipse, fill=white] (UC_Client_View) at (11.5,-4.5) {Suivi p/ Ticket};
+        \node[draw, ellipse, fill=white] (UC_Client_Details) at (6.5,-6.5) {Voir détail};
+        \node[draw, ellipse, fill=white] (UC_Client_Rate) at (11.5,-6.5) {Satisfaction};
+
+        % --- RMQ ---
+        \draw[dashed, fill=white!50, rounded corners] (3.5,-8.5) rectangle (15,-18);
+        \node[font=\itshape, anchor=north west] at (3.5,-8.5) {Espace RMQ};
+        \node[draw, ellipse, fill=white] (UC_RMQ_Dash) at (6,-10.5) {Dashboard};
+        \node[draw, ellipse, fill=white] (UC_RMQ_Validate) at (6,-13) {Valider/Assigner};
+        \node[draw, ellipse, fill=white] (UC_RMQ_Refuse) at (12,-13) {Refuser};
+        \node[draw, ellipse, fill=white] (UC_RMQ_Edit) at (9,-15.5) {Modifier/Traiter};
+        \node[draw, ellipse, fill=white] (UC_RMQ_Stats) at (12,-10.5) {Stats RMQ};
+
+        % --- NOTIF ---
+        \draw[dashed, fill=white!50, rounded corners] (3.5,-18.5) rectangle (15,-24);
+        \node[font=\itshape, anchor=north west] at (3.5,-18.5) {Notifications};
+        \node[draw, ellipse, fill=white, font=\small] (UC_Notif) at (9.25,-21.5) {Email (Conf / Refus / Statut)};
+
+        % --- LIAISONS ---
+        \draw (client) -- (UC_Auth); \draw (client) -- (UC_Client_Create); \draw (client) -- (UC_Client_View);
+        \draw (rmq) -- (UC_Auth); \draw (rmq) -- (UC_RMQ_Dash); \draw (rmq) -- (UC_RMQ_Validate); \draw (rmq) -- (UC_RMQ_Edit);
+        \draw[->, dotted, red] (UC_Client_Create) -- (UC_Notif);
+        \draw[->, dotted, red] (UC_RMQ_Refuse) -- (UC_Notif);
+    \end{tikzpicture}
+    \caption{Cas d'Utilisation : Flux Client et Pilotage Qualité}
+\end{figure}
     \label{fig:dcu_global}
 \end{figure}
 
@@ -52,7 +113,7 @@ Le diagramme suivant présente une vue d'ensemble exhaustive des interactions en
 Les diagrammes de séquence illustrent les interactions temporelles entre les acteurs et le système pour des scénarios clés.
 
 \subsection{Séquence : Acteur Client}
-Le flux suivant montre comment une réclamation est traitée lors de sa création par le client. Il illustre l'interaction avec le contrôleur de tickets et le service de messagerie pour garantir que le client reçoit une confirmation immédiate de son dépôt.
+Ce diagramme explique comment un client interagit avec le système. On y voit les étapes pour déposer une réclamation (même sans compte), suivre l'avancement de son dossier et donner son avis une fois le problème réglé.
 
 \begin{figure}[H]
     \centering
@@ -69,7 +130,7 @@ Le flux suivant montre comment une réclamation est traitée lors de sa créatio
 \end{figure}
 
 \subsection{Séquence : Acteur Commercial}
-Ce diagramme met en évidence le rôle de soutien du commercial. Il illustre la phase de recherche dans le référentiel client et le pré-remplissage dynamique du formulaire, permettant un gain de temps considérable lors des visites sur site.
+Ici, on détaille le travail du commercial qui aide les clients sur le terrain. Le diagramme montre comment il recherche un client, crée un nouveau compte si besoin, et remplit rapidement le formulaire de réclamation grâce aux informations déjà enregistrées.
 
 \begin{figure}[H]
     \centering
@@ -85,7 +146,7 @@ Ce diagramme met en évidence le rôle de soutien du commercial. Il illustre la 
 \end{figure}
 
 \subsection{Séquence : Acteur RMQ}
-Le Responsable Qualité intervient comme le pivot décisionnel. Le diagramme de séquence décrit ici le processus de validation d'une plainte, l'assignation d'un expert AQF et la mise à jour immédiate du statut, assurant la traçabilité de chaque action.
+Ce diagramme présente les actions du Responsable Qualité (RMQ). Il examine les réclamations reçues pour décider s'il faut les valider et assigner un fournisseur, ou bien les refuser en expliquant pourquoi au client.
 
 \begin{figure}[H]
     \centering
@@ -102,7 +163,7 @@ Le Responsable Qualité intervient comme le pivot décisionnel. Le diagramme de 
 \end{figure}
 
 \subsection{Séquence : Acteur AQF}
-Le diagramme suivant détaille la phase finale de résolution. L'expert AQF interagit avec le système pour consigner les décisions prises, joindre les preuves techniques et clôturer définitivement le dossier afin de libérer les ressources.
+Enfin, ce diagramme présente le travail de l'expert AQF. Il s'occupe de la partie technique : il analyse le problème, enregistre sa décision finale et dépose une preuve (comme un document ou une photo) pour fermer définitivement la réclamation.
 
 \begin{figure}[H]
     \centering
@@ -117,23 +178,8 @@ Le diagramme suivant détaille la phase finale de résolution. L'expert AQF inte
     \caption{Diagramme de Séquence -- Résolution AQF}
 \end{figure}
 
-\subsection{Séquence : Administrateur}
-Le rôle d'administration garantit l'intégrité du système. Ce flux montre la gestion du cycle de vie des utilisateurs, de la création de compte à la définition des droits d'accès, ainsi que la consultation des archives multi-annuelles.
-
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}[scale=0.85, transform shape]
-        \node[draw, rectangle, fill=red!10] (adm) at (0,0) {Admin};
-        \node[draw, rectangle, fill=blue!10] (ctrl) at (5,0) {AdminController};
-        \draw[dashed] (adm) -- (0,-4); \draw[dashed] (ctrl) -- (5,-4);
-        \draw[->] (0,-1.5) -- node[above, font=\scriptsize] {createUserAccount()} (5,-1.5);
-        \draw[->] (0,-3) -- node[above, font=\scriptsize] {accessYearData(2025)} (5,-3);
-    \end{tikzpicture}
-    \caption{Diagramme de Séquence -- Maintenance Admin}
-\end{figure}
-
-\section{Diagramme de Classes Unique}
-Le modèle statique présenté ci-après définit la structure de données du "Central de Réclamation". Il montre l'héritage entre l'entité Utilisateur et ses sous-classes, ainsi que la composition forte entre un Ticket et ses composants (Historique, Pièces Jointes, Commentaires).
+\section{Diagramme de classes}
+Ce diagramme présente la structure globale de la base de données. Il montre comment les différents utilisateurs (Client, Commercial, RMQ, etc.) sont reliés aux tickets de réclamation, ainsi que la gestion des pièces jointes, des commentaires et de l'historique pour chaque dossier.
 
 \begin{figure}[H]
     \centering

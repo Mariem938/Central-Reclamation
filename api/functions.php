@@ -255,7 +255,8 @@ function creerTicket($data) {
             $data['analyse_causes'] ?? null,
             $data['analyse_consequences'] ?? null,
             $data['notes'] ?? null,
-            $estValide
+            $estValide,
+            $data['nom_societe'] ?? null
         ];
 
         $stmt->execute($params);

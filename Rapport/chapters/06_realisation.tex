@@ -1,183 +1,276 @@
 \chapter{Réalisation}
 
-\section*{Introduction}
-La phase de réalisation concrétise l'ensemble des études préalables et conceptuelles effectuées. Ce chapitre présente les aspects techniques de la mise en œuvre du système "Central de Réclamation", depuis la configuration de l'environnement de développement jusqu'à la présentation des interfaces utilisateurs finales, en passant par l'architecture logicielle retenue.
+Cette étape finale de notre travail consiste en la mise en œuvre concrète des solutions conçues lors des phases précédentes. Ce chapitre détaille l'environnement technique, l'architecture ainsi que les différentes interfaces développées pour répondre aux besoins de la société SCPC Comptoir Hammami.
 
-\section{Environnement de réalisation}
-Pour concrétiser ce projet, nous avons mis en place un environnement de développement complet.
+\section{Architecture technique de l'application}
+L'architecture de l'application a été pensée pour être à la fois robuste et évolutive. Nous avons privilégié une structure claire permettant une maintenance facilitée et une séparation nette des responsabilités.
 
-\subsection{Outils logiciels}
-\begin{itemize}
-    \item \textbf{Visual Studio Code :} Notre environnement de développement intégré (IDE) principal.
-    \item \textbf{XAMPP :} Pour simuler un serveur de production en local (Apache/MySQL/PHP).
-    \item \textbf{Git :} Pour le versionnage du code source.
-    \item \textbf{PHPMailer :} Bibliothèque d'envoi d'emails SMTP.
-\end{itemize}
+\subsection{Structure du projet}
+Afin de garantir une organisation optimale du code source, nous avons adopté une arborescence modulaire. L'image suivante montre comment les fichiers sont regroupés par fonctionnalités et par rôles utilisateurs pour assurer une clarté maximale lors du développement :
 
-\section{Architecture de l'application}
-L'application repose sur une architecture MVC (Modèle-Vue-Contrôleur) simplifiée :
-\begin{itemize}
-    \item \textbf{Modèle :} Gestion des données (fichiers dans \texttt{/api/} et \texttt{/config/}).
-    \item \textbf{Vue :} Interfaces utilisateurs (fichiers dans \texttt{/pages/}).
-    \item \textbf{Contrôleur :} Logique métier et routage (fichier \texttt{index.php}).
-\end{itemize}
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran de l'arborescence du projet}\\[0.5cm]\texttt{images/arborescence\_projet.png}\vspace{3cm}}}
+    \caption{Organisation structurelle du projet}
+    \label{fig:arborescence}
+\end{figure}
 
-\section{Interfaces Graphiques}
-L'ergonomie a été travaillée pour offrir une expérience utilisateur fluide et professionnelle. Nous présentons ci-dessous les principales interfaces du système, organisées par espace utilisateur.
+\subsection{Base de données}
+Le cœur de notre système repose sur une base de données relationnelle structurée. Nous avons conçu un schéma permettant de lier efficacement les réclamations aux clients, aux agents et aux actions de suivi, garantissant ainsi l'intégrité et la traçabilité des données :
 
-% ==================================================
-% ESPACE CLIENT
-% ==================================================
-\subsection{Espace Client}
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Schéma relationnel de la base de données}\\[0.5cm]\texttt{images/schema\_bd.png}\vspace{3cm}}}
+    \caption{Modèle logique de données}
+    \label{fig:database_schema}
+\end{figure}
 
-\subsubsection{Page d'Accueil et Authentification}
-La page d'accueil permet aux utilisateurs (Clients et Personnel) de se connecter de manière sécurisée. Le design est épuré, aux couleurs de l'entreprise (Bleu et Blanc).
+\section{Implémentation des fonctionnalités}
+Nous présentons dans cette section les principales interfaces de l'application. Chaque module a été conçu pour offrir une ergonomie adaptée aux missions de chaque acteur du système, avec un accès sécurisé et différencié.
+
+\subsection{Page d'accueil et Authentification}
+La page d'accueil est le point d'entrée principal de l'application. Elle permet aux visiteurs de soumettre ou suivre une réclamation via deux boutons d'action, et donne accès, grâce au menu hamburger situé en haut à droite, aux différents espaces sécurisés de la plateforme.
 
 \begin{figure}[H]
     \centering
     \includegraphics[width=14cm]{images/accueil_client.png}
-    \caption{Interface d'accueil -- Page principale du système}
+    \caption{Interface de la page d'accueil du système}
     \label{fig:accueil}
 \end{figure}
 
-\subsubsection{Formulaire de Nouvelle Réclamation}
-Le formulaire de soumission permet au client de saisir les informations détaillées de sa réclamation, incluant la possibilité d'ajouter plusieurs produits et des pièces jointes.
+Pour garantir une sécurité optimale et une expérience utilisateur fluide, le système propose deux portails d’accès distincts selon le profil de l’utilisateur (Client ou Agent) :
+
+\textbf{Plateforme de Connexion Clientèle} \\
+Les clients accèdent à un espace simplifié dédié au dépôt et au suivi de leurs réclamations personnelles, assurant ainsi une confidentialité totale des données.
 
 \begin{figure}[H]
     \centering
-    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran à insérer}\\[0.5cm]\texttt{images/form_nouvelle_reclamation.png}\vspace{3cm}}}
-    \caption{Formulaire de création d'une nouvelle réclamation}
-    \label{fig:form-reclamation}
+    \includegraphics[width=12cm]{images/login_client.png}
+    \caption{Interface d'Authentification Sécurisée Client}
+    \label{fig:login_client}
 \end{figure}
 
-\subsubsection{Tableau de Bord Client}
-Le dashboard client offre une vue centralisée de toutes les réclamations soumises avec leur statut actuel.
+\textbf{Console d'Accès Multi-Profils} \\
+Les agents internes (RMQ, AQF, Admin, Commercial) utilisent un portail centralisé qui les redirige vers leurs outils de gestion spécifiques après identification.
 
 \begin{figure}[H]
     \centering
-    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran à insérer}\\[0.5cm]\texttt{images/dashboard_client.png}\vspace{3cm}}}
-    \caption{Tableau de bord de l'espace client}
-    \label{fig:dashboard-client}
+    \includegraphics[width=12cm]{images/login_agent.png}
+    \caption{Portail de Connexion Centralisé pour les Collaborateurs}
+    \label{fig:login_agent}
 \end{figure}
 
-% ==================================================
-% ESPACE COMMERCIAL
-% ==================================================
-\subsection{Espace Commercial}
+\subsection{Module Espace Client}
+L'espace client est conçu pour offrir une autonomie totale dans le dépôt et le suivi des réclamations.
 
-\subsubsection{Tableau de Bord Commercial}
-L'interface commerciale permet aux agents de créer des réclamations au nom des clients et de suivre l'ensemble des tickets.
+\subsubsection{Création de réclamation et suivi}
+L'espace client a été conçu pour offrir une autonomie totale dans le dépôt et le suivi des réclamations. Le parcours client s'articule autour de deux modes d'accès complémentaires.
+
+\textbf{Dépôt d'une réclamation depuis la page d'accueil} \\
+Dès la page d'accueil, tout visiteur peut initier une nouvelle réclamation via le bouton « Nouvelle Réclamation », accessible sans connexion préalable. Ce formulaire de dépôt guidé permet au client de saisir avec précision ses doléances : nature du problème, catégorie, description détaillée, ainsi que toute pièce justificative nécessaire. À l'issue de la soumission, un système de notification automatique par email est activé. S'il s'agit de la toute première réclamation du client, celui-ci reçoit un email de confirmation contenant son numéro de ticket ainsi que ses identifiants personnels (générés automatiquement) pour se connecter à son espace. Pour les réclamations suivantes, comme le client possède déjà un compte, il reçoit uniquement le nouveau numéro de ticket et le récapitulatif de son enregistrement.
 
 \begin{figure}[H]
     \centering
-    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran à insérer}\\[0.5cm]\texttt{images/dashboard_commercial.png}\vspace{3cm}}}
-    \caption{Tableau de bord de l'espace commercial}
-    \label{fig:dashboard-commercial}
+    \includegraphics[width=14cm]{images/accueil_client.png}
+    \caption{Interface de la page d'accueil et lancement d'une réclamation}
+    \label{fig:accueil-claim}
 \end{figure}
 
-% ==================================================
-% ESPACE RMQ
-% ==================================================
-\subsection{Espace Responsable Management Qualité (RMQ)}
-
-\subsubsection{Tableau de Bord RMQ}
-Le tableau de bord RMQ permet une supervision globale des réclamations. Il affiche :
-\begin{itemize}
-    \item Des indicateurs statistiques en temps réel (KPI).
-    \item La répartition des tickets par statut.
-    \item La liste des derniers tickets reçus avec actions rapides.
-\end{itemize}
+\textbf{Tableau de bord de l'espace client connecté} \\
+Pour les clients disposant d'un compte, la connexion à l'espace personnel donne accès à un tableau de bord centralisé offrant une vue synthétique et exhaustive de l'ensemble des réclamations déposées. Ce tableau de bord présente des indicateurs clés (total des réclamations, dossiers validés, en traitement, résolus) ainsi qu'une liste détaillée de chaque ticket avec son statut, sa catégorie et sa date de dépôt.
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=14cm]{images/dashboard_rmq.png}
-    \caption{Tableau de bord de gestion des réclamations -- Espace RMQ}
-    \label{fig:dashboard-rmq}
+    \includegraphics[width=12cm]{images/ds_client.png}
+    \caption{Tableau de bord de l'espace client — vue synthétique des réclamations}
+    \label{fig:client-dash}
 \end{figure}
 
-\subsubsection{Détail d'un Ticket}
-Cette interface présente l'ensemble des informations d'une réclamation avec les actions disponibles (validation, refus, assignation fournisseur, changement de statut).
+\textbf{Suivi de réclamation sans connexion} \\
+Pour les clients ne souhaitant pas s'authentifier, le système propose un accès alternatif via la fonctionnalité « Suivre ma Réclamation ». Il suffit au client de saisir son numéro de ticket pour accéder instantanément aux informations essentielles de son dossier sans nécessiter de connexion au compte.
 
 \begin{figure}[H]
     \centering
-    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran à insérer}\\[0.5cm]\texttt{images/detail_ticket_rmq.png}\vspace{3cm}}}
-    \caption{Interface de détail d'un ticket -- Espace RMQ}
-    \label{fig:detail-rmq}
+    \fbox{\parbox{12cm}{\centering\vspace{2cm}\textit{Interface de recherche rapide par numéro de ticket}\\[0.5cm]\texttt{images/suivi\_anonyme.png}\vspace{2cm}}}
+    \caption{Interface de suivi rapide par numéro de ticket}
+    \label{fig:client-followup}
 \end{figure}
 
-\subsubsection{Module Statistiques}
-Le module statistiques offre des graphiques et tableaux de bord analytiques pour le suivi des performances.
+\textbf{Détail et historique du ticket} \\
+Une fois le ticket localisé, le client accède à une fiche détaillée présentant l'ensemble des informations relatives à sa réclamation : description, coordonnées, date de création, décision RMQ et résolution apportée.
 
 \begin{figure}[H]
     \centering
-    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran à insérer}\\[0.5cm]\texttt{images/statistiques_rmq.png}\vspace{3cm}}}
-    \caption{Module statistiques -- Espace RMQ}
-    \label{fig:stats-rmq}
+    \fbox{\parbox{12cm}{\centering\vspace{2cm}\textit{Fiche détaillée d'un ticket de réclamation}\\[0.5cm]\texttt{images/detail\_ticket\_client.png}\vspace{2cm}}}
+    \caption{Fiche détaillée d'un ticket de réclamation}
+    \label{fig:ticket-detail}
 \end{figure}
 
-% ==================================================
-% ESPACE AQF
-% ==================================================
-\subsection{Espace Assistant Qualité Fournisseur (AQF)}
-
-\subsubsection{Tableau de Bord AQF}
-L'interface AQF affiche uniquement les tickets ayant un fournisseur assigné, permettant un suivi ciblé des réclamations liées aux fournisseurs.
+\textbf{Suivi visuel de la progression du dossier} \\
+Pour rendre le suivi plus clair, une interface de suivi du statut permet au client de visualiser en temps réel l'avancement de son dossier à travers un parcours étapes clairement défini (Vérification, Traitement, Résolu). Une barre de progression indique le taux d'avancement global du dossier.
 
 \begin{figure}[H]
     \centering
-    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran à insérer}\\[0.5cm]\texttt{images/dashboard_aqf.png}\vspace{3cm}}}
-    \caption{Tableau de bord de l'espace AQF}
-    \label{fig:dashboard-aqf}
+    \fbox{\parbox{12cm}{\centering\vspace{2cm}\textit{Suivi visuel de la progression du ticket par étapes}\\[0.5cm]\texttt{images/suivi\_visuel.png}\vspace{2cm}}}
+    \caption{Suivi visuel de la progression du ticket par étapes}
+    \label{fig:visual-progress}
 \end{figure}
 
-% ==================================================
-% ESPACE ADMIN
-% ==================================================
-\subsection{Espace Administrateur}
-
-\subsubsection{Gestion des Utilisateurs}
-L'interface d'administration permet la gestion complète des utilisateurs du système (création, modification, activation/désactivation).
+\subsubsection{Avis de satisfaction}
+Une fois le traitement terminé, le client est invité à évaluer la qualité de la réponse apportée via un module dédié, favorisant l'amélioration continue :
 
 \begin{figure}[H]
     \centering
-    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran à insérer}\\[0.5cm]\texttt{images/gestion_users_admin.png}\vspace{3cm}}}
-    \caption{Interface de gestion des utilisateurs -- Espace Admin}
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Interface de dépôt d'avis de satisfaction}\\[0.5cm]\texttt{images/avis\_satisfaction.png}\vspace{3cm}}}
+    \caption{Formulaire d'évaluation de la satisfaction client}
+    \label{fig:avis-client}
+\end{figure}
+
+\subsection{Module Espace RMQ (Responsable Management Qualité)}
+Le RMQ supervise l'intégralité du workflow qualité. Son espace regroupe des outils puissants de pilotage et d'analyse.
+
+\subsubsection{Dashboard RMQ et gestion des réclamations}
+Cette interface offre au RMQ une vue consolidée de tous les tickets entrants, permettant une recherche multicritères et un suivi rigoureux des délais de traitement :
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{images/dashboard_rmq.png}
+    \caption{Interface principale de pilotage RMQ}
+    \label{fig:rmq-main}
+\end{figure}
+
+\subsubsection{Validation, refus et traitement de réclamation}
+Le RMQ dispose d'un accès détaillé pour chaque dossier afin de valider ou refuser les demandes après une analyse rigoureuse des faits rapportés :
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{images/ds_rmq.png}
+    \caption{Vue détaillée et traitement des réclamations}
+    \label{fig:rmq-process}
+\end{figure}
+
+\subsubsection{Assignation fournisseur et décision RMQ}
+Pour les litiges impliquant des tiers, cette vue permet d'assigner les réclamations aux fournisseurs et d'enregistrer les décisions finales du processus qualité :
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Interface d'assignation et de décision}\\[0.5cm]\texttt{images/assignation_decision.png}\vspace{3cm}}}
+    \caption{Gestion des relations fournisseurs et clôture des dossiers}
+    \label{fig:rmq-assign}
+\end{figure}
+
+\subsubsection{Centre analytique RMQ}
+Cette section regroupe les outils d'analyse avancée permettant de dégager les tendances et d'identifier les zones nécessitant des actions correctives :
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Centre d'analyse décisionnelle RMQ}\\[0.5cm]\texttt{images/centre_analytique_rmq.png}\vspace{3cm}}}
+    \caption{Outils d'analyse et de reporting qualité}
+    \label{fig:rmq-stats}
+\end{figure}
+
+\subsection{Module Espace AQF (Assistant Qualité Fournisseur)}
+L'AQF fait le lien entre l'entreprise et les prestataires externes pour résoudre les litiges d'ordre logistique ou de production.
+
+\subsubsection{Dashboard AQF et réclamations assignées}
+Le tableau de bord de l'AQF centralise uniquement les dossiers nécessitant l'intervention d'un fournisseur, optimisant ainsi son temps de travail :
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=12cm]{images/ds_aqf.png}
+    \caption{Tableau de bord de suivi des litiges fournisseurs}
+    \label{fig:aqf-main}
+\end{figure}
+
+\subsubsection{Consultation et traitement de réclamation}
+L'AQF peut consulter les détails de chaque plainte et charger les preuves nécessaires (documents, photos) transmises par les fournisseurs :
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Traitement des dossiers fournisseurs}\\[0.5cm]\texttt{images/traitement_aqf.png}\vspace{3cm}}}
+    \caption{Interface de gestion des preuves et résolutions}
+    \label{fig:aqf-process}
+\end{figure}
+
+\subsubsection{Tableau de bord analytique AQF}
+Cette vue permet de suivre les performances des fournisseurs et le temps moyen de résolution des litiges externes :
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Analytique performance fournisseurs}\\[0.5cm]\texttt{images/analytique_aqf.png}\vspace{3cm}}}
+    \caption{Statistiques de suivi de la qualité fournisseur}
+    \label{fig:aqf-stats}
+\end{figure}
+
+\subsection{Module Espace Administration}
+L'espace administration assure la pérennité et la sécurité du système à travers une gestion rigoureuse des ressources.
+
+\subsubsection{Tableau de bord administrateur}
+L'administrateur dispose d'une vue synthétique sur l'état du système, les volumes de données et la répartition des comptes utilisateurs :
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Dashboard de supervision système}\\[0.5cm]\texttt{images/dashboard_admin.png}\vspace{3cm}}}
+    \caption{Vue globale d'administration du système}
+    \label{fig:admin-main}
+\end{figure}
+
+\subsubsection{Gestion des utilisateurs}
+Cette interface permet la création, la modification et le contrôle des droits d'accès pour chaque collaborateur de l'entreprise :
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Console de gestion des comptes}\\[0.5cm]\texttt{images/gestion_utilisateurs_admin.png}\vspace{3cm}}}
+    \caption{Interface d'administration des utilisateurs}
     \label{fig:admin-users}
 \end{figure}
 
-% ==================================================
-% TESTS
-% ==================================================
-\section{Scénarios de Test}
-Nous avons validé le fonctionnement via les tests fonctionnels suivants :
+\subsubsection{Consultation globale des réclamations}
+L'administrateur garde un droit de regard permanent sur l'ensemble des flux pour assurer le bon fonctionnement technique des processus :
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Vue panoramique des tickets}\\[0.5cm]\texttt{images/consultation_globale_admin.png}\vspace{3cm}}}
+    \caption{Consultation exhaustive des données du système}
+    \label{fig:admin-view}
+\end{figure}
+
+\subsubsection{Statistiques et analyses}
+La génération de rapports périodiques complexes est centralisée ici pour aider la direction dans ses prises de décisions stratégiques :
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Module statistique avancé}\\[0.5cm]\texttt{images/statistiques_analyses_admin.png}\vspace{3cm}}}
+    \caption{Rapports et analyses statistiques globales}
+    \label{fig:admin-stats}
+\end{figure}
+
+\subsubsection{Journal d'activités système}
+Pour une sécurité maximale, chaque action effectuée sur la plateforme est journalisée, permettant un audit complet en cas de besoin :
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Journal de traçabilité des actions}\\[0.5cm]\texttt{images/journal_activites_admin.png}\vspace{3cm}}}
+    \caption{Interface de consultation du journal système}
+    \label{fig:admin-logs}
+\end{figure}
+
+\section{Méthodologie de Tests et Validation}
+Pour garantir la fiabilité du système, nous avons effectué des tests rigoureux sur l'ensemble des modules, en nous concentrant sur les scénarios critiques de chaque rôle.
 
 \begin{table}[H]
 \centering
 \begin{tabular}{|l|l|l|}
 \hline
-\textbf{Module} & \textbf{Action} & \textbf{Résultat Attendu} \\ \hline
-Authentification & Saisir identifiants valides & Redirection vers Dashboard \\ \hline
-Authentification & Saisir mot de passe incorrect & Message d'erreur affiché \\ \hline
-Création Ticket & Envoyer formulaire vide & Blocage (Validation JS) \\ \hline
-Création Ticket & Soumettre réclamation valide & Ticket créé + Email envoyé \\ \hline
-Upload & Fichier invalide (.exe) & Rejet du fichier \\ \hline
-Upload & Image valide (.jpg, .png) & Fichier enregistré \\ \hline
-Validation RMQ & Valider un ticket & Statut mis à jour + Notification \\ \hline
-Assignation & Assigner un fournisseur & Ticket visible dans AQF \\ \hline
+\textbf{Composant} & \textbf{Scénario testé} & \textbf{Verdict} \\ \hline
+Authentification & Séparation des accès par rôle & Réussite \\ \hline
+Flux RMQ & Validation et changement de statut & Réussite \\ \hline
+Gestion AQF & Chargement de preuves fournisseurs & Réussite \\ \hline
+Sécurité & Traçabilité dans le journal système & Réussite \\ \hline
 \end{tabular}
-\caption{Synthèse des tests fonctionnels réalisés}
-\label{tab:tests}
+\caption{Synthèse des tests de validation effectués}
+\label{tab:tests_final}
 \end{table}
 
-\section{Sécurité}
-Plusieurs mesures de sécurité ont été implémentées :
-\begin{itemize}
-    \item \textbf{Authentification :} Mots de passe hashés avec \texttt{password\_hash()}.
-    \item \textbf{Sessions :} Gestion sécurisée des sessions PHP.
-    \item \textbf{Requêtes préparées :} Utilisation de PDO pour prévenir les injections SQL.
-    \item \textbf{Validation :} Contrôle des entrées utilisateur côté client et serveur.
-    \item \textbf{Upload :} Restriction des types de fichiers autorisés.
-\end{itemize}
-
 \section*{Conclusion}
-La phase de réalisation a permis de transformer les spécifications fonctionnelles et techniques en une application concrète et utilisable. L'architecture MVC et le choix des technologies ont facilité le développement d'une solution modulaire et évolutive. Les tests effectués confirment que le système est robuste et répond aux attentes initiales de la société SCPC Comptoir Hammami.
+La phase de réalisation a permis de concrétiser une plateforme modulaire répondant aux exigences métiers de la SCPC. L'accent mis sur la traçabilité et la spécificité des rôles assure un gain de productivité et une meilleure transparence dans la gestion des réclamations.

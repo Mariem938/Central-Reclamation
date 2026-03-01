@@ -164,3 +164,10 @@
 [2026-02-06 15:44:17] V15 REVERT ID:28 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Mise à Jour - TKT-2026-0005
 [2026-02-06 21:38:52] V15 REVERT ID:32 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Confirmation TKT-2026-0008
 [2026-02-06 21:38:56] V15 REVERT ID:32 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0008)
+[2026-02-24 15:10:03] V15 REVERT ID:33 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Bienvenue chez SCPC - Vos identifiants de connexion (Ticket TKT-2026-0003)
+[2026-02-24 15:10:04] V15 REVERT ID:33 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0003)
+[2026-02-24 15:10:06] V15 REVERT ID:33 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0003)
+[2026-02-25 22:57:47] V15 REVERT ID:34 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Confirmation TKT-2026-0004
+[2026-02-25 22:57:48] V15 REVERT ID:34 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0004)
+[2026-02-25 22:57:52] V15 REVERT ID:34 | To:Multi | Stat:sent | Sub:Nouvelle réclamation créée – Action requise (Ticket n° TKT-2026-0004)
+[2026-02-26 01:18:12] V15 REVERT ID:33 | To:frikhamariem95@gmail.com | Stat:sent | Sub:Information Dossier

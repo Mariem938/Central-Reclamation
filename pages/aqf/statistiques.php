@@ -445,19 +445,24 @@ $intervals = $db->query("
             <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 4rem;">
                 <div class="dur-row">
                     <div class="dur-item">
-                        <div class="dur-val"><?php echo round($durationMetrics['avg_days'], 1); ?></div>
+                        <div class="dur-val"><?php echo $durationMetrics['avg_days'] !== null ? round($durationMetrics['avg_days'], 1) : '--'; ?></div>
                         <div class="dur-label">Moyenne</div>
                     </div>
                     <div class="dur-item">
-                        <div class="dur-val"><?php echo $durationMetrics['min_days'] ?? 0; ?></div>
+                        <div class="dur-val"><?php echo $durationMetrics['min_days'] !== null ? $durationMetrics['min_days'] : '--'; ?></div>
                         <div class="dur-label">Minimum</div>
                     </div>
                     <div class="dur-item">
-                        <div class="dur-val"><?php echo $durationMetrics['max_days'] ?? 0; ?></div>
+                        <div class="dur-val"><?php echo $durationMetrics['max_days'] !== null ? $durationMetrics['max_days'] : '--'; ?></div>
                         <div class="dur-label">Maximum</div>
                     </div>
                 </div>
-                <div style="height: 250px;">
+                <div style="height: 250px; position: relative;">
+                    <?php if ((int)$intervals['0_3'] + (int)$intervals['4_7'] + (int)$intervals['over_7'] === 0): ?>
+                        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background: rgba(255,255,255,0.7); z-index: 10; border-radius: 12px; border: 1px dashed #cbd5e1;">
+                            <p style="color: #94a3b8; font-weight: 600; font-size: 0.9rem;"> <i class="fas fa-info-circle"></i> Données en attente d'expertise</p>
+                        </div>
+                    <?php endif; ?>
                     <canvas id="durationChart"></canvas>
                 </div>
             </div>

@@ -1,4 +1,4 @@
-\chapter{Infrastructure informatique}
+\chapter{Environnement de travail et ressources technologiques}
 
 \section*{Introduction}
 La réalisation d'un projet informatique nécessite un environnement de travail adéquat, composé de ressources matérielles performantes et d'outils logiciels adaptés. Ce chapitre détaille l'infrastructure technique utilisée durant la période de stage pour mener à bien les phases de conception, développement et rédaction.
@@ -14,117 +14,156 @@ Pour le développement de l'application et la rédaction du rapport, j'ai utilis
 \end{itemize}
 
 \section{Environnement Logiciel}
-Dans cette partie, nous allons présenter et détailler les différents outils informatiques utilisés dans notre travail.
+Dans cette partie, nous allons présenter les différents outils informatiques utilisés pour le développement, la modélisation et le déploiement.
 
-% --- Visual Studio Code ---
+\subsection{Développement et Tests Locaux}
+
 \noindent
 \begin{minipage}[c]{0.3\textwidth}
     \centering
-    \includegraphics[width=0.6\textwidth]{assets/images/logos/vscode.png}
+    \includegraphics[width=0.6\textwidth]{images/vscode.png}
     \captionof{figure}{Visual Studio Code}
 \end{minipage}
 \hfill
 \begin{minipage}[c]{0.65\textwidth}
-    \textbf{Visual Studio Code (VS Code) :} Cet IDE open source et multiplateforme développé par Microsoft intègre des fonctionnalités telles que la coloration syntaxique, l'auto-complétion IntelliSense, la gestion du code source avec Git, et un terminal intégré, facilitant ainsi le développement.
+    \textbf{Visual Studio Code (VS Code) :} L'éditeur de code principal utilisé pour ce projet. Sa polyvalence et ses extensions (PHP IntelliSense, GitLink) en font un outil incontournable.
 \end{minipage}
 
-\vspace{0.8cm}
+\vspace{0.6cm}
 
-% --- XAMPP ---
 \noindent
 \begin{minipage}[c]{0.3\textwidth}
     \centering
-    \includegraphics[width=0.6\textwidth]{assets/images/logos/xampp.png}
+    \includegraphics[width=0.6\textwidth]{images/xampp.png}
     \captionof{figure}{XAMPP}
 \end{minipage}
 \hfill
 \begin{minipage}[c]{0.65\textwidth}
-    \textbf{XAMPP :} est une distribution Apache facile à installer contenant MySQL, PHP et Perl. Il s'agit d'un serveur local complet qui permet de tester les applications web dynamiques sur une machine locale de manière simple et rapide.
+    \textbf{XAMPP :} Utilisé comme environnement de serveur local (Apache + MySQL + PHP) pour tester l'application avant son déploiement.
 \end{minipage}
 
-\vspace{0.8cm}
+\vspace{0.6cm}
 
-% --- PHP ---
+\subsection{Langages et Technologies Web}
+
 \noindent
 \begin{minipage}[c]{0.3\textwidth}
     \centering
-    \includegraphics[width=0.5\textwidth]{assets/images/logos/php.png}
+    \includegraphics[width=0.5\textwidth]{images/html.png}
+    \captionof{figure}{HTML5}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.65\textwidth}
+    \textbf{HTML5 :} Langage de balisage utilisé pour la structuration sémantique et le contenu des pages web. Il constitue le squelette de l'application.
+\end{minipage}
+
+\vspace{0.6cm}
+
+\noindent
+\begin{minipage}[c]{0.3\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/css.png}
+    \captionof{figure}{CSS3}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.65\textwidth}
+    \textbf{CSS3 :} Langage de feuilles de style utilisé pour la mise en forme graphique, le design responsive et l'esthétique globale de l'interface utilisateur.
+\end{minipage}
+
+\vspace{0.6cm}
+
+\noindent
+\begin{minipage}[c]{0.3\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/php.png}
     \captionof{figure}{PHP}
 \end{minipage}
 \hfill
 \begin{minipage}[c]{0.65\textwidth}
-    \textbf{PHP (Hypertext Preprocessor) :} est un langage de script côté serveur spécialement conçu pour le développement web. Il permet de rendre les pages dynamiques et d'interagir nativement avec la base de données.
+    \textbf{PHP :} Langage de script côté serveur, utilisé pour le développement de la logique métier, la gestion des sessions utilisateurs et les interactions avec la base de données. Il constitue le moteur dynamique de l'application.
 \end{minipage}
 
-\vspace{0.8cm}
+\vspace{0.6cm}
 
-% --- MySQL ---
 \noindent
 \begin{minipage}[c]{0.3\textwidth}
     \centering
-    \includegraphics[width=0.5\textwidth]{assets/images/logos/mysql.png}
-    \captionof{figure}{MySQL}
-\end{minipage}
-\hfill
-\begin{minipage}[c]{0.65\textwidth}
-    \textbf{MySQL :} est le système de gestion de base de données (SGBD) relationnel le plus utilisé au monde. Il assure le stockage, l'organisation et la récupération sécurisée des données de l'application.
-\end{minipage}
-
-\vspace{0.8cm}
-
-% --- HTML5 & CSS3 ---
-\noindent
-\begin{minipage}[c]{0.3\textwidth}
-    \centering
-    \includegraphics[width=0.6\textwidth]{assets/images/logos/web_tech.png}
-    \captionof{figure}{Technologies Web}
-\end{minipage}
-\hfill
-\begin{minipage}[c]{0.65\textwidth}
-    \textbf{HTML5 \& CSS3 :} Ce duo constitue la base de l'interface utilisateur. HTML5 définit la structure sémantique du contenu tandis que CSS3 gère la présentation visuelle, les couleurs et la mise en page responsive.
-\end{minipage}
-
-\vspace{0.8cm}
-
-% --- JavaScript ---
-\noindent
-\begin{minipage}[c]{0.3\textwidth}
-    \centering
-    \includegraphics[width=0.5\textwidth]{assets/images/logos/javascript.png}
+    \includegraphics[width=0.5\textwidth]{images/js.png}
     \captionof{figure}{JavaScript}
 \end{minipage}
 \hfill
 \begin{minipage}[c]{0.65\textwidth}
-    \textbf{JavaScript :} est un langage de programmation qui permet de rendre les pages web interactives. Dans ce projet, il est utilisé pour la validation des formulaires et la gestion dynamique des éléments de l'interface.
+    \textbf{JavaScript :} Langage de programmation côté client permettant d'enrichir l'expérience utilisateur via des interactions dynamiques, la validation de formulaires en temps réel et la gestion des menus interactifs.
 \end{minipage}
 
-\vspace{0.8cm}
+\vspace{0.6cm}
 
-% --- Git ---
+\subsection{Système de Gestion de Base de Données}
+
 \noindent
 \begin{minipage}[c]{0.3\textwidth}
     \centering
-    \includegraphics[width=0.5\textwidth]{assets/images/logos/git.png}
-    \captionof{figure}{Git}
+    \includegraphics[width=0.6\textwidth]{images/mysql.png.jpg}
+    \captionof{figure}{MySQL}
 \end{minipage}
 \hfill
 \begin{minipage}[c]{0.65\textwidth}
-    \textbf{Git :} est un système de gestion de versions décentralisé. Il permet de suivre l'historique des modifications du code source et de sécuriser le développement en permettant des retours en arrière si nécessaire.
+    \textbf{MySQL :} Système de gestion de base de données relationnelle (SGBDR) robuste et performant. Il assure le stockage structuré, la persistance et l'intégrité des données du système d'information.
 \end{minipage}
 
-\vspace{0.8cm}
+\vspace{0.6cm}
 
-% --- StarUML ---
+\subsection{Bibliothèques et Outils Tiers}
+
 \noindent
 \begin{minipage}[c]{0.3\textwidth}
     \centering
-    \includegraphics[width=0.6\textwidth]{assets/images/logos/staruml.png}
-    \captionof{figure}{StarUML}
+    \includegraphics[width=0.5\textwidth]{images/bootstrap.png}
+    \captionof{figure}{Bootstrap}
 \end{minipage}
 \hfill
 \begin{minipage}[c]{0.65\textwidth}
-    \textbf{StarUML :} est un logiciel de modélisation UML puissant et sophistiqué. Il offre une interface intuitive pour la création de diagrammes de cas d'utilisation, de classes et de séquences, facilitant la conception architecturale de systèmes complexes.
+    \textbf{Bootstrap :} Framework CSS populaire utilisé pour accélérer le développement front-end et garantir une interface parfaitement responsive, s'adaptant à tous les types d'écrans (mobiles, tablettes, desktop).
+\end{minipage}
+
+\vspace{0.6cm}
+
+\noindent
+\begin{minipage}[c]{0.3\textwidth}
+    \centering
+    \includegraphics[width=0.5\textwidth]{images/fontawesome.png}
+    \captionof{figure}{Font Awesome}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.65\textwidth}
+    \textbf{Font Awesome :} Bibliothèque d'icônes vectorielles offrant une large gamme de symboles graphiques pour améliorer la lisibilité et l'ergonomie des interfaces utilisateurs.
+\end{minipage}
+
+\vspace{0.6cm}
+
+\noindent
+\begin{minipage}[c]{0.3\textwidth}
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/phpmailer.png}
+    \captionof{figure}{PHPMailer}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.65\textwidth}
+    \textbf{PHPMailer :} Bibliothèque PHP complète et sécurisée pour la gestion de l'envoi d'emails. Elle est utilisée pour les notifications automatiques et l'envoi de confirmations aux utilisateurs.
+\end{minipage}
+
+\subsection{Déploiement et Hébergement}
+
+\noindent
+\begin{minipage}[c]{0.3\textwidth}
+    \centering
+    \includegraphics[width=0.6\textwidth]{images/ovh.jpg}
+    \captionof{figure}{OVHcloud}
+\end{minipage}
+\hfill
+\begin{minipage}[c]{0.65\textwidth}
+    \textbf{OVHcloud :} Fournisseur d'hébergement choisi pour la mise en ligne de l'application. Sa fiabilité et ses serveurs sécurisés garantissent la disponibilité de la plateforme.
 \end{minipage}
 
 \section*{Conclusion}
-L'environnement de travail mis en place, alliant une machine performante et une suite logicielle complète, a permis de dérouler les différentes étapes du projet dans les meilleures conditions. Cette infrastructure technique constitue le socle sur lequel repose la phase de réalisation que nous aborderons ultérieurement.
+Ce chapitre a permis de dresser le panorama technique du projet. De l'environnement matériel robuste à la suite logicielle intégrant des technologies web fondamentales (HTML, CSS, JavaScript et MySQL), l'infrastructure a été pensée pour allier performance, sécurité et maintenabilité.

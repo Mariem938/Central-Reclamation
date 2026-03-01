@@ -1,0 +1,97 @@
+\chapter{Hébergement de l'application}
+
+Le déploiement en ligne constitue une étape cruciale pour rendre l'application accessible à tous les acteurs. Pour ce projet, nous avons opté pour un hébergement chez OVHcloud, leader européen, afin de bénéficier d'une infrastructure robuste et sécurisée. Cette section détaille les principales étapes suivies pour la mise en production.
+
+\section{Configuration du Domaine et du Multisite}
+
+\subsection{Étape 1 : Sélection de l'hébergement}
+La première étape consiste à accéder à l'espace client OVH et à sélectionner l'offre d'hébergement existant sur lequel nous souhaitons travailler. Il est alors nécessaire de naviguer vers la section "Multi-site" pour initier la liaison avec le domaine choisi.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran : Sélection de l'hébergement}\\[0.5cm]\texttt{images/hebergement\_step1.png}\vspace{3cm}}}
+    \caption{Interface de gestion de l'hébergement OVH}
+\end{figure}
+
+\subsection{Étape 2 : Ajout du sous-domaine}
+Une fois dans la section Multisite, nous cliquons sur le bouton « Ajouter un domaine ou un sous-domaine ». Nous saisissons le nom de domaine choisi et définissons le dossier racine sur le serveur (devant correspondre au nom du projet) pour assurer le bon pointage des scripts.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran : Configuration du Multisite}\\[0.5cm]\texttt{images/hebergement\_step2.png}\vspace{3cm}}}
+    \caption{Configuration du domaine et du dossier racine}
+\end{figure}
+
+\subsection{Étape 3 : Validation du récapitulatif}
+Une fenêtre modale s'affiche alors, présentant le récapitulatif de toutes les informations saisies lors des étapes précédentes afin de confirmer la configuration avant la création effective.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran : Fenêtre de validation}\\[0.5cm]\texttt{images/hebergement\_step3.png}\vspace{3cm}}}
+    \caption{Validation des paramètres du sous-domaine}
+\end{figure}
+
+\subsection{Étape 4 : Vérification de la liste des domaines}
+Après validation, la liste des noms de domaine renseignés s'affiche, permettant de vérifier que l'ensemble des informations correspondantes (SSL, IP pays, etc.) est correctement activé.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran : Liste des domaines actifs}\\[0.5cm]\texttt{images/hebergement\_step4.png}\vspace{3cm}}}
+    \caption{État du domaine dans la rubrique Multisite}
+\end{figure}
+
+\section{Transfert des fichiers et base de données}
+
+\subsection{Étape 5 : Transfert via FileZilla}
+Pour téléverser l'application, nous utilisons le client FTP FileZilla. La connexion s'établit en saisissant l'hôte, l'utilisateur et le mot de passe récupérés dans la rubrique FTP/SSH de l'hébergeur. Le transfert s'effectue par glisser-déposer vers le dossier racine défini.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran : Transfert FTP}\\[0.5cm]\texttt{images/hebergement\_step5.png}\vspace{3cm}}}
+    \caption{Déploiement des fichiers via FileZilla}
+\end{figure}
+
+\subsection{Étape 6 : Création de la base de données distante}
+Dans la rubrique "Bases de données", nous cliquons sur « Créer une base de données ». Une fois créée, nous utilisons le menu pour « Accéder à phpMyAdmin » afin de gérer les tables en ligne.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran : Gestion de la base}\\[0.5cm]\texttt{images/hebergement\_step6.png}\vspace{3cm}}}
+    \caption{Création et accès à la base de données MySQL}
+\end{figure}
+
+\subsection{Étape 7 : Authentification phpMyAdmin}
+L'accès à l'interface de gestion de la base de données requiert la saisie du mot de passe défini lors de la création de la base sur OVH.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran : Connexion phpMyAdmin}\\[0.5cm]\texttt{images/hebergement\_step7.png}\vspace{3cm}}}
+    \caption{Interface de connexion à phpMyAdmin distant}
+\end{figure}
+
+\subsection{Étape 8 : Importation du schéma SQL}
+Grâce à l'onglet « Importer », nous téléchargeons le fichier SQL exporté de notre environnement local pour reconstruire la structure de la base sur le serveur de production.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran : Importation SQL}\\[0.5cm]\texttt{images/hebergement\_step8.png}\vspace{3cm}}}
+    \caption{Importation des données de l'application}
+\end{figure}
+
+\subsection{Étape 9 : Vérification de l'intégrité des données}
+Une fois l'importation terminée, le système affiche la liste des tables créées avec succès, confirmant que l'enregistrement des données a été effectué correctement.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Capture d'écran : Liste des tables}\\[0.5cm]\texttt{images/hebergement\_step9.png}\vspace{3cm}}}
+    \caption{Vue des tables importées sur le serveur OVH}
+\end{figure}
+
+\subsection{Étape 10 : Actualisation du fichier de configuration}
+La dernière étape essentielle consiste à mettre à jour le fichier \texttt{config/database.php}. Il faut remplacer les coordonnées du serveur local par les nouveaux paramètres fournis par OVH (Host, User, Pass, Name) pour établir la liaison.
+
+\begin{figure}[H]
+    \centering
+    \fbox{\parbox{12cm}{\centering\vspace{3cm}\textit{Code : Configuration database.php}\\[0.5cm]\texttt{images/hebergement\_step10.png}\vspace{3cm}}}
+    \caption{Mise à jour des paramètres de connexion production}
+\end{figure}

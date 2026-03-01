@@ -606,10 +606,6 @@ if (!isset($pageTitle)) {
                 <i class="fas fa-clipboard-list"></i>
                 <span>Réclamations</span>
             </a>
-            <a href="statistiques.php" class="navbar-link <?php echo basename($_SERVER['PHP_SELF']) === 'statistiques.php' ? 'active' : ''; ?>">
-                <i class="fas fa-chart-pie"></i>
-                <span>Statistiques</span>
-            </a>
             <a href="activities.php" class="navbar-link <?php echo basename($_SERVER['PHP_SELF']) === 'activities.php' ? 'active' : ''; ?>">
                 <i class="fas fa-history"></i>
                 <span>Activités</span>
@@ -685,7 +681,6 @@ if (!isset($pageTitle)) {
         <a href="index.php" class="mobile-menu-link <?php echo basename($_SERVER['PHP_SELF']) === 'index.php' ? 'active' : ''; ?>"><i class="fas fa-tachometer-alt"></i> <span>Dashboard</span></a>
         <a href="users.php" class="mobile-menu-link <?php echo basename($_SERVER['PHP_SELF']) === 'users.php' ? 'active' : ''; ?>"><i class="fas fa-users"></i> <span>Utilisateurs</span></a>
         <a href="reclamations.php" class="mobile-menu-link <?php echo basename($_SERVER['PHP_SELF']) === 'reclamations.php' ? 'active' : ''; ?>"><i class="fas fa-clipboard-list"></i> <span>Réclamations</span></a>
-        <a href="statistiques.php" class="mobile-menu-link <?php echo basename($_SERVER['PHP_SELF']) === 'statistiques.php' ? 'active' : ''; ?>"><i class="fas fa-chart-pie"></i> <span>Statistiques</span></a>
         <a href="activities.php" class="mobile-menu-link <?php echo basename($_SERVER['PHP_SELF']) === 'activities.php' ? 'active' : ''; ?>"><i class="fas fa-history"></i> <span>Activités</span></a>
         <a href="../../pages/logout.php" class="mobile-menu-link" style="color: var(--danger-color) !important;"><i class="fas fa-sign-out-alt"></i> <span>Déconnexion</span></a>
     </div>

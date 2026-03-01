@@ -3,51 +3,71 @@
 \section*{Introduction}
 La réussite d'un projet informatique dépend d'une compréhension profonde de son environnement et des besoins réels de ses utilisateurs. Ce chapitre pose les fondations de notre travail en présentant d'abord le cadre du projet, la problématique rencontrée et les objectifs visés. Nous détaillerons ensuite l'étude de l'existant afin de justifier les choix de conception qui ont guidé le développement de la solution "Central de Réclamation".
 
-\section{Présentation du thème du stage}
+\section{Présentation du projet}
 Le stage effectué au sein de la société SCPC Comptoir Hammami s'inscrit dans une optique de modernisation des processus internes. Face à l'accroissement du volume d'activités et à l'exigence croissante en matière de qualité de service, il est devenu impératif de repenser la gestion des réclamations clients.
 
 \subsection{Problématique}
-Actuellement, la gestion des réclamations au sein de la SCPC repose sur des processus qui peuvent manquer de fluidité ou de traçabilité centralisée. Les informations circulent entre différents services (Commercial, Qualité, Fournisseur) parfois via des canaux dispersés (téléphone, emails non structurés), ce qui peut entraîner :
-\begin{itemize}
-    \item Une perte d'information ou des délais de réponse allongés.
-    \item Une difficulté à obtenir une vision globale des statistiques de non-conformité.
-    \item Un manque de visibilité pour le client sur l'avancement de son dossier.
-\end{itemize}
+Actuellement, la gestion des réclamations au sein de la SCPC repose sur des processus qui manquent de fluidité et de traçabilité centralisée. Les informations circulent entre différents services (Commercial, Qualité, Fournisseur) via des canaux dispersés (téléphone, emails non structurés), ce qui entraîne des retards et une opacité dans le suivi des dossiers clients.
 
 \subsection{Objectifs du projet}
-Les principaux objectifs assignés à ce stage sont :
-\begin{enumerate}
-    \item Analyser les besoins fonctionnels des différents acteurs.
-    \item Concevoir une architecture logicielle robuste et évolutive.
-    \item Développer l'application en utilisant des technologies web standards.
-    \item Garantir la fiabilité des données et la sécurité des accès.
-\end{enumerate}
+Les principaux objectifs assignés à ce projet sont synthétisés dans le tableau suivant :
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|p{4cm}|p{10cm}|}
+        \hline
+        \rowcolor[HTML]{E9ECEF} 
+        \textbf{Objectif} & \textbf{Description} \\ \hline
+        \textbf{Centralisation} & Regrouper toutes les réclamations dans une base de données unique et sécurisée. \\ \hline
+        \textbf{Traçabilité} & Assurer un suivi historique complet de chaque ticket, de l'ouverture à la clôture. \\ \hline
+        \textbf{Collaboration} & Faciliter la communication entre les services (Commercial, RMQ, AQF) via un outil commun. \\ \hline
+        \textbf{Performance} & Générer des statistiques automatiques pour piloter la qualité et la satisfaction client. \\ \hline
+    \end{tabular}
+    \caption{Objectifs du projet}
+\end{table}
 
 \section{Étude de l'existant}
 L'étude préalable permet de comprendre le fonctionnement actuel de l'organisme et de déceler les failles nécessitant une intervention informatique.
 
 \subsection{Description du processus actuel}
-Avant le démarrage du projet, le flux de traitement des réclamations se caractérisait par l'absence d'outils dédiés :
-\begin{itemize}
-    \item \textbf{Saisie Manuelle :} Les informations sont notées sur papier ou envoyées par email non structuré.
-    \item \textbf{Centralisation sur Excel :} Le Responsable Qualité (RMQ) doit ressaisir manuellement les données dans un fichier Excel local ("Registre des Non-Conformités").
-    \item \textbf{Suivi Opaque :} Pour connaître l'état d'un dossier, le client ou le commercial doit appeler manuellement le service qualité.
-\end{itemize}
+Avant le démarrage du projet, le flux de traitement des réclamations se caractérisait par l'absence d'outils dédiés. Le Responsable Qualité (RMQ) devait collecter manuellement des données éparses provenant de divers canaux pour les centraliser laborieusement dans des registres non dynamiques.
 
-\subsection{Critiques de l'existant}
-Ce fonctionnement présente des limites majeures :
-\begin{itemize}
-    \item \textbf{Limites Organisationnelles :} Absence de traçabilité, perte de temps liée à la ressaisie, manque de réactivité.
-    \item \textbf{Limites Techniques :} Risque de perte de données (Excel unique/local), absence de statistiques automatisées, impossibilité de travail collaboratif fluide.
-\end{itemize}
+\subsection{Critique de l'existant}
+Le système actuel présente plusieurs lacunes majeures qui nuisent à l'efficacité globale :
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|p{4cm}|p{10cm}|}
+        \hline
+        \rowcolor[HTML]{E9ECEF} 
+        \textbf{Problème} & \textbf{Description} \\ \hline
+        \textbf{Gestion Manuelle} & La saisie sur papier ou Excel entraîne des erreurs humaines et des pertes de temps liées à la ressaisie. \\ \hline
+        \textbf{Manque de Visibilité} & Difficulté pour le client et le commercial de suivre l'avancement en temps réel sans appel téléphonique. \\ \hline
+        \textbf{Absence d'Audit} & Il est complexe de retracer l'historique exact des décisions prises par les différents intervenants sur un dossier. \\ \hline
+        \textbf{Analyse complexe} & La génération de statistiques sur la qualité nécessite un travail manuel fastidieux et sujet aux erreurs. \\ \hline
+    \end{tabular}
+    \caption{Critique de l'existant}
+\end{table}
 
 \section{Solution proposée : "Central de Réclamation"}
-Face à ces constats, le développement d'une application web sur mesure a été retenu. Cette solution informatique vise à dématérialiser l'intégralité du flux de traitement :
-\begin{itemize}
-    \item \textbf{Développement spécifique :} Coller parfaitement au workflow de validation qualité de la SCPC.
-    \item \textbf{Centralisation :} Une base de données unique accessible en temps réel par tous les acteurs (Clients, Commerciaux, RMQ, AQF).
-    \item \textbf{Automatisation :} Notification automatique par email et calcul instantané des indicateurs de performance.
-\end{itemize}
+Le développement d'une application web sur mesure a été retenu pour pallier les défauts de l'existant. Cette solution vise à dématérialiser l'intégralité du processus :
+
+\begin{table}[H]
+    \centering
+    \renewcommand{\arraystretch}{1.5}
+    \begin{tabular}{|p{4cm}|p{10cm}|}
+        \hline
+        \rowcolor[HTML]{E9ECEF} 
+        \textbf{Fonctionnalité} & \textbf{Description} \\ \hline
+        \textbf{Workflow Intégré} & Digitalisation du circuit de validation (Validation RMQ, Traitement AQF). \\ \hline
+        \textbf{Accès Multi-Rôles} & Interfaces dédiées selon le profil utilisateur (Client, Commercial, RMQ, AQF, Admin). \\ \hline
+        \textbf{Dashboard Dynamique} & Vue d'ensemble en temps réel sur l'état des réclamations et les alertes. \\ \hline
+        \textbf{Reporting Automatisé} & Calcul instantané des KPIs et export des preuves de résolution. \\ \hline
+    \end{tabular}
+    \caption{Synthèse de la solution proposée}
+\end{table}
 
 \section*{Conclusion}
-Ce chapitre a permis de fusionner le cadre du stage et l'analyse de l'existant, mettant en évidence la nécessité de moderniser le système de gestion des réclamations. Le passage d'une gestion manuelle sur Excel à une plateforme interactive constitue le socle du projet. Le chapitre suivant présentera l'infrastructure technique nécessaire à la réalisation de cette solution.
+Ce chapitre a mis en évidence la nécessité de moderniser le système de gestion des réclamations de la SCPC. Le passage d'une gestion éparse à une plateforme interactive centralisée constitue le socle de notre intervention. Le chapitre suivant détaillera l'infrastructure technique qui supporte cette réalisation.
