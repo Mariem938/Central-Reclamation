@@ -10,9 +10,11 @@ if (session_status() === PHP_SESSION_NONE) {
 }
 
 // Configuration de la base de données
-define('DB_HOST', '127.0.0.1');
+//define('DB_HOST', '127.0.0.1');
+//define('DB_HOST', 'host.docker.internal');
+define('DB_HOST', 'db');
 define('DB_USER', 'root');
-define('DB_PASS', '');
+define('DB_PASS', 'root');
 define('DB_NAME', 'central_reclamation');
 
 // Classe Proxy pour injecter le filtre d'année

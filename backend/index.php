@@ -9,8 +9,10 @@ require_once 'config/database.php';
 // Récupérer les statistiques
 $db = getDB();
 
+
     // Statistiques removed as per user request
     $stats_total = 0;
+    
     $stats_nouveaux = 0;
     $stats_encours = 0;
     $stats_resolus = 0;
