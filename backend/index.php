@@ -10,6 +10,8 @@ require_once 'config/database.php';
 $db = getDB();
 
 
+
+
     // Statistiques removed as per user request
     $stats_total = 0;
     $stats_nouveaux = 0;
