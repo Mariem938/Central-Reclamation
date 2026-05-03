@@ -1,6 +1,7 @@
 /**
  * Script principal - Central de Réclamation
  * Fichier: assets/js/main.js
+
  */
 
 // Animation au chargement
