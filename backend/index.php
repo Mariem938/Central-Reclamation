@@ -1,8 +1,6 @@
 <?php
 /**
  * Page d'Accueil - Central de Réclamation
- * 
- * 
  * Premium Expert Design
  */
 
