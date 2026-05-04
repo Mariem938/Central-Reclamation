@@ -1,38 +1,27 @@
- 
 pipeline {
     agent any
-    
+    environment {
+        JAVA_HOME = "C:\\Program Files\\Java\\jdk-21.0.10"
+        PATH = "${JAVA_HOME}\\bin;${env.PATH}"
+    }
     stages {
         stage('Check SonarScanner Installation') {
             steps {
                 script {
                     def scannerHome = tool 'MySonarScanner'
                     echo "SonarScanner should be installed at: ${scannerHome}"
-                    
                     bat "dir \"${scannerHome}\\bin\\sonar-scanner.bat\""
                     bat "\"${scannerHome}\\bin\\sonar-scanner.bat\" -v"
                 }
             }
         }
-        
-        stage('Checkout GitHub') {
+
+        stage('Checkout from GitHub') {
             steps {
-                script {
-                    def branchName = env.BRANCH_NAME ?: 'master'
-                    echo "Branche détectée : ${branchName}"
-                    
-                    checkout([
-                        $class: 'GitSCM',
-                        branches: [[name: "*/${branchName}"]],
-                        userRemoteConfigs: [[
-                            url: 'https://github.com/Mariem938/Central-Reclamation.git',
-                            credentialsId: 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
-                        ]]
-                    ])
-                }
+                git url: 'https://github.com/Mariem938/Central-Reclamation'
             }
         }
-        
+
         stage('Analyse SonarQube') {
             steps {
                 script {
@@ -40,7 +29,7 @@ pipeline {
                     withSonarQubeEnv('projet') {
                         withCredentials([string(credentialsId: 'sonarqube', variable: 'TOKEN')]) {
                             bat "\"${scannerHome}\\bin\\sonar-scanner.bat\" " +
-                                "-Dsonar.projectKey=central-reclamation " +
+                                "-Dsonar.projectKey=node-projetcid " +
                                 "-Dsonar.sources=. " +
                                 "-Dsonar.login=%TOKEN% " +
                                 "-Dsonar.projectVersion=1.0.0 " +
