@@ -1,0 +1,150 @@
+--tp5
+--Q1
+create or replace function SalaireEmp(numE employe.numemp%type)
+return number
+is
+sal employe.salaire%type;
+begin
+select salaire into sal
+from employe
+where numemp=numE;
+return sal;
+end;
+--------
+create or replace procedure InsertionEmp(numE employe.numemp%type,
+nom employe.nomemp%type,fct employe.fonction%type,num_chef employe.chefemp%type,
+salE employe.salaire%type,numD employe.numdep%type)
+is
+dep_inex exception;
+pragma exception_init(dep_inex ,-2291);
+err_sal exception;
+sal_chef employe.salaire%type;
+begin
+if num_chef is not null then
+sal_chef:=SalaireEmp(num_chef);
+if sal_chef<salE then
+raise err_sal ;
+end if;
+end if;
+insert into employe (numemp,nomemp,fonction,chefemp,dateemb,salaire,commission,numdep)
+values(numE,nom,fct,num_chef,sysdate,salE,0,numD);
+update departement 
+set nbemp=nbemp+1
+where numdep=numD;
+exception
+when no_data_found then
+dbms_output.put_line('Le supérieur hiérarchique désigné pour l’employé est inexistant.');
+when err_sal then
+dbms_output.put_line('Le salaire de l’employé est supérieur à celui de son supérieur hiérarchique.');
+when dep_inex then
+dbms_output.put_line('Le département spécifié est inexistant.');
+end;
+--Q2
+create or replace trigger salEmp
+before insert on employe
+for each row
+--when(:new.chefemp is not null)
+declare
+salchef employe.salaire%type;
+begin
+if :new.chefemp is not null then
+salchef:=salaireemp(:new.chefemp);
+if :new.salaire >salchef then
+RAISE_APPLICATION_ERROR(-20001, 'Salaire employ" invalie');
+end if;
+end if;
+end;
+---
+create or replace procedure InsertionEmp(numE employe.numemp%type,
+nom employe.nomemp%type,fct employe.fonction%type,num_chef employe.chefemp%type,
+salE employe.salaire%type,numD employe.numdep%type)
+is
+dep_inex exception;
+pragma exception_init(dep_inex ,-2291);
+err_sal exception;
+pragma exception_init(err_sal ,-20001);
+begin
+insert into employe (numemp,nomemp,fonction,chefemp,dateemb,salaire,commission,numdep)
+values(numE,nom,fct,num_chef,sysdate,salE,0,numD);
+update departement 
+set nbemp=nbemp+1
+where numdep=numD;
+exception
+when no_data_found then
+dbms_output.put_line('Le supérieur hiérarchique désigné pour l’employé est inexistant.');
+when err_sal then
+dbms_output.put_line('Le salaire de l’employé est supérieur à celui de son supérieur hiérarchique.');
+when dep_inex then
+dbms_output.put_line('Le département spécifié est inexistant.');
+end;
+
+--Q3
+CREATE TABLE HistoriqueAffect (
+   NumDep NUMBER,
+   NumEmp NUMBER,
+   DateAff DATE,
+   DateDepart DATE,
+   constraint pk_histaff primary key(numdep,numemp,dateaff)
+);
+insert into  historiqueaffect (numdep,numemp,dateaff)
+select numdep,numemp,dateemb
+from employe;
+create or replace trigger historique_affect
+after insert or update of numdep on employe
+for each row
+begin
+if inserting then
+insert into historiqueaffect values(:new.numdep,:new.numemp,:new.dateemb,null);
+else 
+update historiqueaffect 
+set datedepart=sysdate
+where numemp=:old.numemp and datedepart is null;
+insert into historiqueaffect values(:new.numdep,:new.numemp,sysdate,null);
+update departement 
+set nbemp=nbemp-1
+where numdep=:old.numdep;
+end if;
+update departement 
+set nbemp=nbemp+1
+where numdep=:new.numdep;
+end;
+
+--Q4
+alter table employe add dateEstRet date; 
+update employe
+set dateestret=add_months(dateemb,40*12);
+--procedure
+create or replace procedure RetraiteEmp
+is 
+cursor c is select numemp,dateestret
+from employe e,historiqueaffect h where dateestret<=sysdate and datedepart is null and h.numemp=e.numemp ;
+begin
+for rc in c loop
+update historiqueaffect
+set datedepart=rc.dateestret
+where datedepart is null and numemp=rc.numemp;
+update participationprojet 
+set datefin=rc.dateestret
+where datefin is null and numemp=rc.numemp;
+end loop;
+end;
+--trigger
+create or replace trigger MajNbEmp
+after insert or update of datedepart on historiqueaffect
+for each row
+begin
+if inserting then
+update departement
+set nbemp=nbemp+1
+where numdep=:new.numdep;
+else
+update departement
+set nbemp=nbemp-1
+where numdep=:old.numdep;
+end if;
+end;
+
+
+
+
+
