@@ -2,6 +2,7 @@
 /**
  * Fonctions Utilitaires - Adapté pour table utilisateurs
  * Fichier: api/functions.php
+
  */
 
 require_once __DIR__ . '/../config/database.php';
